@@ -1,24 +1,13 @@
-# README
+# OurTube
+OurTube is a youtube clone that allows you to upload and view videos uploaded by other users. Users can create thier own profiles and view the profiles of other users. While viewing a video users have the ability to comment on, like, or dislike the video. Additionally users can see if other users have liked, disliked, or commented on a video
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Wiki Page](https://github.com/Alyx-Clark/OurTube.wiki)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Technologies Used
+* Javascript
+* React
+* Redux
+* CSS
+* HTML
+* Ruby
+* Ruby on Rails
