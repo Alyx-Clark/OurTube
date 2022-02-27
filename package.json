@@ -1,5 +1,39 @@
 {
   "name": "OurTube",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "description": "OurTube is a youtube clone that allows you to upload and view videos uploaded by other users. Users can create thier own profiles and view the profiles of other users. While viewing a video users have the ability to comment on, like, or dislike the video. Additionally users can see if other users have liked, disliked, or commented on a video",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alyx-Clark/OurTube.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alyx-Clark/OurTube/issues"
+  },
+  "homepage": "https://github.com/Alyx-Clark/OurTube#readme"
 }
