@@ -1,5 +1,8 @@
+require 'bcrypt'
+
 class User < ApplicationRecord
     
+    include Bcrypt
     attr_reader :password
 
     validates :username, :password_digest, :session_token, :email, presence: true
