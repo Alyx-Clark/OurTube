@@ -1,11 +1,10 @@
 require 'bcrypt'
 
 class User < ApplicationRecord
-    
-    include Bcrypt
+
     attr_reader :password
 
-    validates :username, :password_digest, :session_token, :email, presence: true
+    validates :username, :password_digest, :session_token, :email, :first_name, :last_name, presence: true
     validates :username, :email, uniqueness: true
     validates :password, length: { minimum: 6 }, allow_nil: true
 
@@ -14,15 +13,15 @@ class User < ApplicationRecord
     # has_many :videos,
     #     foreign_key: :user_id
         
-    has_many :comments
-        foreign_key: :author_id
+    # has_many :comments
+    #     foreign_key: :author_id
 
     # has_many :liked_videos,
     #     through: :likes,
     #     source: :videos
 
-    def self.find_by_credentials(username, password)
-        user = User.find_by(username: username)
+    def self.find_by_credentials(user_name, password)
+        user = User.find_by(user_name: user_name)
         return nil unless user
         user.is_password?(password) ? user : nil
     end
