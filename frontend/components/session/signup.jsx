@@ -54,18 +54,20 @@ class Signup extends React.Component {
             <h3>to continue to OurTube</h3>
           </div>
           <div className="firstlast">
-            <div className="inputContainer">
+            <div className="inputContainer2">
+              <input type="text" className="input" value={this.state.first_name} onChange={this.update('first_name')} placeholder='First name' />
               <label className="label">First name</label>
-              <input type="text" className="input" value={this.state.first_name} onChange={this.update('first_name')} />
             </div>
-            <div className="inputContainer">
-              <label className="label">Last name</label>
-              <input type="text" className="input" value={this.state.last_name} onChange={this.update('last_name')} />
+            <div className="inputContainer2">
+              <div className="lastName">
+                <input type="text" className="input" value={this.state.last_name} onChange={this.update('last_name')} placeholder="Last name" />
+                <label className="label">Last name</label>
+              </div>
             </div>
           </div>
           <div className="inputContainer">
+            <input type="text" className="input" value={this.state.email} onChange={this.update('email')} placeholder="Your email address" />
             <label className="label">Your email address</label>
-            <input type="text" className="input" value={this.state.email} onChange={this.update('email')} />
           </div>
           <div className="confirmEmail">
             <p>You'll need to confirm that this email belongs to you.</p>
@@ -74,12 +76,12 @@ class Signup extends React.Component {
             <a onClick={this.logindemo}>Try a new demo account instead</a>
           </div>
           <div className="inputContainer">
+            <input type="password" className="input" value={this.state.password} onChange={this.update('password')} placeholder="Password" />
             <label className="label">Password</label>
-            <input type="password" className="input" value={this.state.password} onChange={this.update('password')} />
           </div>
           <div className="inputContainer">
+            <input type="text" className="input" value={this.state.user_name} onChange={this.update('user_name')} placeholder="Username" />
             <label className="label">Username</label>
-            <input type="text" className="input" value={this.state.user_name} onChange={this.update('user_name')} />
           </div>
           <div className="passwordtext">
             <span>Use 8 or more characters with a mix of letters, numbers &amp; symbols</span>

@@ -45,20 +45,18 @@ class Login extends React.Component {
       <div className="signupForm">
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <form className="form" onSubmit={this.handleSubmit}>
-          <div className="headers">
-            <div className="headersLogin">
-              <h2>Goodle</h2>
-              <h2>Sign in</h2>
-              <h3>to continue to OurTube</h3>
-            </div>
+          <div className="headersLogin">
+            <h2>Goodle</h2>
+            <h2>Sign in</h2>
+            <h3>to continue to OurTube</h3>
           </div>
           <div className="inputContainer">
+            <input type="text" className="input" value={this.state.user_name} onChange={this.update('user_name')} placeholder="Username"/>
             <label className="label">Username</label>
-            <input type="text" className="input" value={this.state.user_name} onChange={this.update('user_name')} />
           </div>
           <div className="inputContainer">
+            <input type="password" className="input" value={this.state.password} onChange={this.update('password')} placeholder="Password"/>
             <label className="label">Password</label>
-            <input type="password" className="input" value={this.state.password} onChange={this.update('password')} />
           </div>
           <p>Forgot password?</p>
           <div className="demoInstead">
