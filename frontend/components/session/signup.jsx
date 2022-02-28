@@ -41,45 +41,48 @@ class Signup extends React.Component {
   render() {
     return (
       <div className="signupForm">
-        <div className="another">
-          <div class="headers">
-            <h2>goodle</h2>
-            <h2>Create your goodle Account</h2>
+        <form className="form" onSubmit={this.handleSubmit}>
+          <div className="headers">
+            <h2>Goodle</h2>
+            <h2>Create your Goodle Account</h2>
             <h3>to continue to OurTube</h3>
           </div>
-          <form class="form" onSubmit={this.handleSubmit}>
-            <div class="input">
-              <label class="label">First name
-                <input type="text" value={this.state.first_name} onChange={this.update('first_name')} />
-              </label>
+          <div className="firstlast">
+            <div className="inputContainer">
+              <label className="label">First name</label>
+              <input type="text" class="input" value={this.state.first_name} onChange={this.update('first_name')} />
             </div>
-            <div class="input">
-              <label class="label">Last name
-                <input type="text" value={this.state.last_name} onChange={this.update('last_name')} />
-              </label>
+            <div className="inputContainer">
+              <label className="label">Last name</label>
+              <input type="text" class="input" value={this.state.last_name} onChange={this.update('last_name')} />
             </div>
-            <div class="input">
-              <label class="label">Your email address
-                <input type="text" value={this.state.email} onChange={this.update('email')} />
-              </label>
-            </div>
+          </div>
+          <div className="inputContainer">
+            <label className="label">Your email address</label>
+            <input type="text" class="input" value={this.state.email} onChange={this.update('email')} />
+          </div>
+          <div className="confirmEmail">
             <p>You'll need to confirm that this email belongs to you.</p>
+          </div>
+          <div className="gmailInstead">
             <p>Create a new Gmail address instead</p>
-            <div class="input">
-              <label class="label">Password
-                <input type="password" value={this.state.password} onChange={this.update('password')} />
-              </label>
-            </div>
-            <div class="input">
-              <label class="label">Username
-                <input type="text" value={this.state.user_name} onChange={this.update('user_name')} />
-              </label>
-            </div>
+          </div>
+          <div className="inputContainer">
+            <label className="label">Password</label>
+            <input type="password" class="input" value={this.state.password} onChange={this.update('password')} />
+          </div>
+          <div className="inputContainer">
+            <label className="label">Username</label>
+            <input type="text" class="input" value={this.state.user_name} onChange={this.update('user_name')} />
+          </div>
+          <div className="passwordtext">
             <span>Use 8 or more characters with a mix of letters, numbers &amp; symbols</span>
-            <button type="submit" class="submitBtn">Next</button>
+          </div>
+          <div className="bottomButtons">
             <Link className="btn" to="/login">Sign in instead</Link>
-          </form>
-        </div>
+            <button type="submit" className="submitBtn">Next</button>
+          </div>
+        </form>
       </div>
     );
   }

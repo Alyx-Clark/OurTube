@@ -1,0 +1,129 @@
+.signupForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form{
+    background-color: white;
+    width: 600px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    border-color: black;
+    box-shadow: 0 5px 5px rgba(92, 99, 105, .2);
+}
+
+.headers{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+
+.inputContainer{
+    position: relative;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 17px;
+}
+
+.input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    z-index: 1;
+}
+
+::placeholder {
+    color: transparent;
+}
+
+.confirmEmail{
+    font-size: 14px;
+    color: #707174;
+}
+
+.gmailInstead{
+    font-size: 16px;
+    color: #1A73E8;
+}
+
+.passwordtext{
+    font-size: 14px;
+    color: #707174
+}
+
+.label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: white;
+    color: #707174;
+    font-size: 16px;
+    transition: 0.5s;
+    z-index: 0;
+}
+
+.submitBtn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: #1A73E8;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.submitBtn:hover {
+    background-color: #1456ad;
+}
+
+.btn{
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: white;
+    color: #1A73E8;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.btn:hover{
+    color: #1456ad;
+}
+
+.input:focus + .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1A73E8;
+}
+
+.input:focus {
+    border: 2px solid #1A73E8;
+}
+
+.input:not(:placeholder-shown)+ .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+}
