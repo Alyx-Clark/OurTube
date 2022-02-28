@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class Login extends React.Component {
   constructor(props) {
@@ -8,6 +9,11 @@ class Login extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.logindemo = this.logindemo.bind(this);
+  }
+  
+  logindemo(){
+    this.props.processForm({ email: "alex@ourtube", first_name: "Alex", last_name: "Clark", user_name: "demo", password: "password"})
   }
 
   update(field) {
@@ -36,23 +42,33 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="session-form">
-          <h2>goodle</h2>
-          <h2>Sign in</h2>
-          <h3>to continue to OurTube</h3>
-          <form onSubmit={this.handleSubmit}>
-              <label>Username
-                <input type="text" value={this.state.user_name} onChange={this.update('user_name')} />
-              </label>
-              <label>Password
-                <input type="password" value={this.state.password} onChange={this.update('password')} />
-              </label>
-              <p>Forgot password?</p>
-              <span>Not your computer? Use Demo mode to sign in privately.</span>
-              <button>Demo sign in</button>
-              <button type="submit">Next</button>
-              <button>Create account</button>
-          </form>
+      <div className="signupForm">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+        <form className="form" onSubmit={this.handleSubmit}>
+          <div className="headers">
+            <div className="headersLogin">
+              <h2>Goodle</h2>
+              <h2>Sign in</h2>
+              <h3>to continue to OurTube</h3>
+            </div>
+          </div>
+          <div className="inputContainer">
+            <label className="label">Username</label>
+            <input type="text" className="input" value={this.state.user_name} onChange={this.update('user_name')} />
+          </div>
+          <div className="inputContainer">
+            <label className="label">Password</label>
+            <input type="password" className="input" value={this.state.password} onChange={this.update('password')} />
+          </div>
+          <p>Forgot password?</p>
+          <div className="demoInstead">
+            <a onClick={this.logindemo}>Not your computer? Use Demo mode to sign in privately.</a>
+          </div>
+          <div className="bottomButtons">
+            <Link className="btn" to="/signup">Create account</Link>
+            <button type="submit" className="submitBtn">Next</button>
+          </div>
+        </form>
       </div>
     );
   }

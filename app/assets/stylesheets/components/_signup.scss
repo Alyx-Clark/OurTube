@@ -7,7 +7,7 @@
 
 .form{
     background-color: white;
-    width: 600px;
+    width: 400px;
     border-radius: 8px;
     padding: 20px 40px;
     border-color: black;
@@ -15,8 +15,11 @@
 }
 
 .headers{
-    font-size: 20px;
+    font-size: 15px;
+    color: black;
+    font-weight: 100;
     margin-bottom: 50px;
+    font-family: "Roboto", sans-serif;
 }
 
 
@@ -42,6 +45,12 @@
     z-index: 1;
 }
 
+.firstlast{
+    display:flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
 ::placeholder {
     color: transparent;
 }
@@ -51,9 +60,15 @@
     color: #707174;
 }
 
-.gmailInstead{
+.demoInstead{
     font-size: 16px;
     color: #1A73E8;
+    position: relative;
+    height: 45px;
+}
+
+.demoInstead:hover{
+    cursor: pointer; 
 }
 
 .passwordtext{
@@ -73,9 +88,14 @@
     z-index: 0;
 }
 
+.bottomButtons{
+    display: flex;
+    justify-content: space-between;
+}
+
 .submitBtn {
-    display: block;
-    margin-left: auto;
+    // display: flex;
+    // margin-left: auto;
     padding: 15px 30px;
     border: none;
     background-color: #1A73E8;
@@ -91,8 +111,7 @@
 }
 
 .btn{
-    display: block;
-    margin-left: auto;
+    // display: flex;
     padding: 15px 30px;
     border: none;
     background-color: white;
@@ -101,6 +120,7 @@
     cursor: pointer;
     font-size: 16px;
     margin-top: 30px;
+    text-decoration: none;
 }
 
 .btn:hover{
