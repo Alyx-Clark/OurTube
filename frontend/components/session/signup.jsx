@@ -49,7 +49,16 @@ class Signup extends React.Component {
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <form className="form" onSubmit={this.handleSubmit}>
           <div className="headers">
-            <h2>Goodle</h2>
+            <div className="signupLetters">
+              <h2>
+                <span className="G">G</span>
+                <span className="o">o</span>
+                <span className="o2">o</span>
+                <span className="d">d</span>
+                <span className="l">l</span>
+                <span className="e">e</span>
+              </h2>
+            </div>
             <h2>Create your Goodle Account</h2>
             <h3>to continue to OurTube</h3>
           </div>

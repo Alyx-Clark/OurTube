@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: "Roboto", sans-serif;
 }
 
 .form{
@@ -10,18 +11,61 @@
     width: 400px;
     border-radius: 8px;
     padding: 20px 40px;
-    border-color: black;
-    box-shadow: 0 5px 5px rgba(92, 99, 105, .2);
+    // border-color: black;
+    outline: 1px solid rgb(192, 192, 192);
+    // box-shadow: 0 5px 5px rgba(92, 99, 105, .2);
+    // border-style: solid;
 }
 
 .headers{
     font-size: 15px;
     color: black;
-    font-weight: 100;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-family: "Roboto", sans-serif;
 }
 
+.headers h2{
+    font-weight: 100;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.headers h3{
+    font-weight: 100;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px
+}
+
+.signupLetters{
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.G{
+    color: #1A73E8;
+}
+
+.o{
+    color: #EA4335;
+}
+
+.o2{
+    color: #FABC07;
+}
+
+.d{
+    color: #1A73E8;
+}
+
+.l{
+    color: #37a954;
+}
+
+.e{
+    color: #EA4335
+}
 
 .inputContainer{
     position: relative;
@@ -78,7 +122,8 @@
 }
 
 .demoInstead:hover{
-    cursor: pointer; 
+    cursor: pointer;
+    color: #1456ad; 
 }
 
 .passwordtext{

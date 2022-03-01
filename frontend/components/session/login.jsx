@@ -46,7 +46,16 @@ class Login extends React.Component {
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <form className="form" onSubmit={this.handleSubmit}>
           <div className="headersLogin">
-            <h2>Goodle</h2>
+            <div className="letters">
+              <h2>
+                <span className="G">G</span>
+                <span className="o">o</span>
+                <span className="o2">o</span>
+                <span className="d">d</span>
+                <span className="l">l</span>
+                <span className="e">e</span>
+              </h2>
+            </div>
             <h2>Sign in</h2>
             <h3>to continue to OurTube</h3>
           </div>
@@ -58,7 +67,9 @@ class Login extends React.Component {
             <input type="password" className="input" value={this.state.password} onChange={this.update('password')} placeholder="Password"/>
             <label className="label">Password</label>
           </div>
-          <p>Forgot password?</p>
+          <div className="forgotPass">
+            <p>Forgot password?</p>
+          </div>
           <div className="demoInstead">
             <a onClick={this.logindemo}>Not your computer? Use Demo mode to sign in privately.</a>
           </div>
