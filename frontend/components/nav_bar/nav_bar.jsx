@@ -1,23 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import ourtubelogo from '../../../app/assets/images/Ourtube.png'
+import ourtubelogo from '../../../app/assets/images/Ourtube.png'
+import signinlogo from '../../../app/assets/images/SignIn.png'
+import profilepic from '../../../app/assets/images/profilepic.png'
 
 export default ({ currentUser, logout }) => {
 const display = currentUser ? (
     <div>
-      <h3>Welcome {currentUser.username}!</h3>
-      <button onClick={logout}>Logout</button>
+      <button onClick={logout}><img className="profilepicc" src={profilepic}/></button>
     </div>
   ) : (
     <div>
-      <Link className="navBtn" to="/login">SIGN IN</Link>
+      {/* <Link to="/login"><img className="signinpic" scr={signinlogo}/></Link> */}
+      <Link to="/login"><img className="signinpic" src={signinlogo}/></Link>
     </div>
   );
   return (
-    <header className="nav-bar">
-      <div className="ourLogo">
+    <header className="navs">
+      <div className="display">
         <h1>{display}</h1>
-        {/* <img src={ourtubelogo}/> */}
+      </div>
+      <div className="ourLogo">
+        <Link to="/"><img className="pic" src={ourtubelogo}/></Link>
+      </div>
+      <div className="navsearchbar">
+        <input className="searchbar" type="text" placeholder="Search"/>
       </div>
     </header>
   )
