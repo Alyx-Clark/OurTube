@@ -5,18 +5,18 @@
 }
 
 .signinpic{
-    height: 40px;
+    height: 50px;
 }
 
 .profilepicc{
-    height: 30px;
+    height: 40px;
 }
 
 .navs{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 80px;
     margin-right: 20px;
 }
 
@@ -27,13 +27,35 @@
 
 .searchbar::placeholder{
     font-size: 16px;
+    // padding-left: 8px;
+    // width: 70px;
+    // margin-left: 10px;
     // background-color: green;
 }
 
+.navsearchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.searchglass{
+    outline: none;
+    border: 1px solid rgb(196, 196, 196);
+    height: 44px;
+    width: 60px;
+    background-color: rgb(249, 249, 249);
+}
+
 .searchbar{
-    width: 500px;
-    height: 28px;
-    
+    border-radius: 2px;
+    font-size: 16px;
+    width: 570px;
+    height: 40px;
+    outline: none;
+    border: 1px solid rgb(196, 196, 196);
+    text-indent: 8px;
 }
 
 .searchbar:focus {
@@ -45,6 +67,12 @@
 .micbtn{
     background: none;
     border: none;
+    // margin-top: 10px;
+}
+
+.micimg{
+    // display: flex;
+    // margin-top: 50px;
 }
 
 .uploadbtn{
@@ -52,13 +80,16 @@
     border: none;
 }
 
-.linkedinbtn{
-    background: none;
-    border: none;
+.navgithub{
+    margin-top: 10px;
 }
 
-.githubbtn{
-    background: none;
-    border: none;
+.navlinkedin{
+    margin-top: 10px;
 }
+
+.navupload{
+    margin-top: 10px;
+}
+
 
