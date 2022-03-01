@@ -18,6 +18,10 @@ class Login extends React.Component {
     this.props.processForm({ email: "alex@ourtube", first_name: "Alex", last_name: "Clark", user_name: "demo", password: "password"})
   }
 
+  componentWillUnmount(){
+    this.props.removeErrors();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
