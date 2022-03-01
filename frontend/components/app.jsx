@@ -9,7 +9,6 @@ import Home from "./home/home";
 
 const App = () => (
   <div>
-    <Route exact path="/" component={NavBarContainer} />
     <Route exact path="/" component={Home} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
     <AuthRoute path="/login" component={LoginFormContainer} />

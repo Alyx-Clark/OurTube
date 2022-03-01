@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import ourtubelogo from '../../../app/assets/images/Ourtube.png'
 
 export default ({ currentUser, logout }) => {
 const display = currentUser ? (
@@ -9,15 +10,14 @@ const display = currentUser ? (
     </div>
   ) : (
     <div>
-      <Link className="btn" to="/signup">Sign Up</Link>
-      <Link className="btn" to="/login">Log In</Link>
+      <Link className="navBtn" to="/login">SIGN IN</Link>
     </div>
   );
   return (
     <header className="nav-bar">
-      <h1 className="logo"></h1>
-      <div>
-        {display}
+      <div className="ourLogo">
+        <h1>{display}</h1>
+        {/* <img src={ourtubelogo}/> */}
       </div>
     </header>
   )

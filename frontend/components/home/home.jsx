@@ -1,7 +1,9 @@
 import React from 'react';
+import NavBarContainer from '../nav_bar/nav_bar_container';
 
-export default () => (
+export default () => {
+  return( 
   <div className="home">
-    <h1>OurTube</h1>
+    <NavBarContainer />
   </div>
-)
+)}
