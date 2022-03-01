@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import errorsimg from '../../../app/assets/images/errors.png'
 
 class Signup extends React.Component {
   constructor(props) {
@@ -12,12 +13,12 @@ class Signup extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.logindemo = this.logindemo.bind(this);
+    // this.logindemo = this.logindemo.bind(this);
   }
 
-  logindemo(){
-    this.props.processForm({ email: "alex@ourtube", first_name: "Alex", last_name: "Clark", user_name: "demo", password: "password"})
-  }
+  // logindemo(){
+  //   this.props.processForm({ email: "aalex@ourtube", first_name: "aAlex", last_name: "aClark", user_name: "ademo", password: "apassword"})
+  // }
 
   update(field) {
     return e => this.setState({
@@ -27,16 +28,15 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(()=>this.props.history.push('/'));
+    this.props.processForm(this.state).then(()=>this.props.history.push('/'));
   }
 
   renderErrors() {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
+          <li className="errorslist" key={`error-${i}`}>
+            <img src={errorsimg}/><span>{error}</span>
           </li>
         ))}
       </ul>
@@ -82,7 +82,7 @@ class Signup extends React.Component {
             <p>You'll need to confirm that this email belongs to you.</p>
           </div>
           <div className="demoInstead">
-            <a onClick={this.logindemo}>Try a new demo account instead</a>
+            <Link to="login" className="demolink">Try a new demo account instead on the Sign in page</Link>
           </div>
           <div className="inputContainer">
             <input type="password" className="input" value={this.state.password} onChange={this.update('password')} placeholder="Password" />
@@ -92,6 +92,7 @@ class Signup extends React.Component {
             <input type="text" className="input" value={this.state.user_name} onChange={this.update('user_name')} placeholder="Username" />
             <label className="label">Username</label>
           </div>
+          {this.renderErrors()}
           <div className="passwordtext">
             <span>Use 8 or more characters with a mix of letters, numbers &amp; symbols</span>
           </div>

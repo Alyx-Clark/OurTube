@@ -11,9 +11,9 @@ import github from '../../../app/assets/images/github.png'
 
 export default ({ currentUser, logout }) => {
 
-  const display = currentUser ? (
+  const display = currentUser.id ? (
     <div>
-      <button onClick={logout}><img className="profilepicc" src={profilepic}/></button>
+      <button onClick={logout}className="propicbtn"><img className="profilepicc" src={profilepic}/></button>
     </div>
   ) : (
     <div>
@@ -30,15 +30,15 @@ export default ({ currentUser, logout }) => {
   return (
     <header className="navs">
       <div className="ourLogo">
-        <Link to="/"><img className="pic" src={ourtubelogo}/></Link>
+        <Link to="/"><img className="navourtubepic" src={ourtubelogo}/></Link>
       </div>
       <div className="navsearchbar">
         <input type="text" className="searchbar" placeholder="Search"/>
-        <button className='searchglass'><img src={searchglass}/></button>
+        <Link to="/" className='searchglass'><img src={searchglass} className="searchglassbtn"/></Link>
         <button className="micbtn"><img className="micimg" src={microphone}/></button>
       </div>
       <div className="display">
-        <Link className="uploadbtn"><img className="navupload" src={uploadicon}/></Link>
+        <Link to= "/" className="uploadbtn"><img className="navupload" src={uploadicon}/></Link>
         <a href="https://www.linkedin.com/in/alex-b-clark-wrightstate" target="_blank">
           <img className="navlinkedin" src={linkedin}/>
         </a>

@@ -1,11 +1,18 @@
 
 
-.pic{
+.navourtubepic{
     height: 20px;
+    width: 92px
 }
 
 .signinpic{
     height: 50px;
+}
+
+.propicbtn{
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .profilepicc{
@@ -43,9 +50,14 @@
 .searchglass{
     outline: none;
     border: 1px solid rgb(196, 196, 196);
-    height: 44px;
+    height: 42px;
     width: 60px;
     background-color: rgb(249, 249, 249);
+}
+
+.searchglassbtn{
+    margin-top: 10px;
+    margin-left: 18px;
 }
 
 .searchbar{

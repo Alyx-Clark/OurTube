@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import errorsimg from '../../../app/assets/images/errors.png'
 
 class Login extends React.Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class Login extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.logindemo = this.logindemo.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
   
   logindemo(){
@@ -32,8 +34,8 @@ class Login extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
+          <li className="errorslist" key={`error-${i}`}>
+            <img src={errorsimg}/>{error}
           </li>
         ))}
       </ul>
@@ -67,6 +69,7 @@ class Login extends React.Component {
             <input type="password" className="input" value={this.state.password} onChange={this.update('password')} placeholder="Password"/>
             <label className="label">Password</label>
           </div>
+          {this.renderErrors()}
           <div className="forgotPass">
             <p>Forgot password?</p>
           </div>
