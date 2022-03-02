@@ -2,7 +2,8 @@
 
 .navourtubepic{
     height: 20px;
-    width: 92px
+    width: 92px;
+    margin-right: 65px;
 }
 
 .signinpic{
@@ -17,13 +18,15 @@
 
 .profilepicc{
     height: 40px;
+    padding-right: 15px;
 }
 
 .navs{
+    border-bottom: 1px solid rgb(220, 220, 220);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 80px;
+    margin-left: 70px;
     margin-right: 20px;
 }
 
@@ -34,6 +37,7 @@
 
 .searchbar::placeholder{
     font-size: 16px;
+    color: rgb(130, 130, 130)
     // padding-left: 8px;
     // width: 70px;
     // margin-left: 10px;
@@ -48,25 +52,28 @@
 }
 
 .searchglass{
+    border-radius: 3px;
     outline: none;
-    border: 1px solid rgb(196, 196, 196);
-    height: 42px;
-    width: 60px;
+    border: 1px solid rgb(200, 200, 200);
+    height: 37px;
+    width: 63px;
     background-color: rgb(249, 249, 249);
+    margin-bottom: 8px;
 }
 
 .searchglassbtn{
-    margin-top: 10px;
-    margin-left: 18px;
+    margin-top: 7px;
+    margin-left: 20px;
 }
 
 .searchbar{
-    border-radius: 2px;
+    margin-bottom: 8px;
+    border-radius: 1px;
     font-size: 16px;
     width: 570px;
-    height: 40px;
+    height: 35px;
     outline: none;
-    border: 1px solid rgb(196, 196, 196);
+    border: 1px solid rgb(200, 200, 200);
     text-indent: 8px;
 }
 
@@ -94,14 +101,17 @@
 
 .navgithub{
     margin-top: 10px;
+    padding-right: 15px;
 }
 
 .navlinkedin{
     margin-top: 10px;
+    padding-right: 15px;
 }
 
 .navupload{
     margin-top: 10px;
+    padding-right: 15px;
 }
 
 
