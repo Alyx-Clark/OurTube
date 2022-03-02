@@ -1,9 +1,15 @@
 class Comment < ApplicationRecord
 
-    # validates :body, :user_id, :video_id, presence: true
+    validates :body, :commenter, :video_id, presence: true
 
-    # belongs_to :video
-    # belongs_to :author,
-    #     class_name: :User
+    belongs_to :video,
+        primary_key: id,
+        foreign_key: :video_id,
+        class_name: :Video
+
+    belongs_to :commenter,
+        primary_key: :id,
+        foreign_key: :commenter_id,
+        class_name: :User
 
 end

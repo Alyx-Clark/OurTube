@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ourtubelogo from '../../../app/assets/images/Ourtube.png'
 import signinlogo from '../../../app/assets/images/signinpic.png'
-import profilepic from '../../../app/assets/images/profilepic.png'
+import profilepic from '../../../app/assets/images/profilepicture.png'
 import searchglass from '../../../app/assets/images/searchglass.png'
 import microphone from '../../../app/assets/images/microphone.png'
 import uploadicon from '../../../app/assets/images/uploadicon.png'

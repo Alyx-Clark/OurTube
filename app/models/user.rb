@@ -10,11 +10,13 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
-    # has_many :videos,
-    #     foreign_key: :user_id
-        
-    # has_many :comments
-    #     foreign_key: :author_id
+    has_many :uploads,
+        foreign_key: :uploader_id,
+        class_name: :Video
+
+    has_many :comments,
+        foreign_key: :commenter_id,
+        class_name: :Comment
 
     # has_many :liked_videos,
     #     through: :likes,
