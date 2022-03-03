@@ -5,7 +5,7 @@ import VideoIndex from './video_index';
 
 const mSTP = state => ({
     videos: Object.keys(state.entities.videos).map(key => state.entities.videos[key]),
-    user: state.entities.users
+    users: state.entities.users
 })
 
 const mDTP = dispatch => ({

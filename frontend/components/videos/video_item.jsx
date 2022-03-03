@@ -14,7 +14,6 @@ class VideoItem extends React.Component{
                 <button><img src={video.uploaded_thumbnail}/></button>
                 <h2>{video.title}</h2>
                 <p></p>
-
             </div>
         )
     }
