@@ -5,7 +5,7 @@ import {
 } from '../actions/session_actions';
 // import { LOCATION_CHANGE } from 'connected-react-router';
   
-  export default (state = [], action) => {
+const sessionErrorsReducer = (state = [], action) => {
     Object.freeze(state);
     switch (action.type) {
       case REMOVE_ERRORS:
@@ -18,3 +18,6 @@ import {
         return state;
     }
 };
+
+
+export default sessionErrorsReducer;

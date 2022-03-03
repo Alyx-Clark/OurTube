@@ -1,20 +1,21 @@
 @videos.each do |video|
     json.set! video.id do
         json.extract! video, :id, :title, :description
-        json.uploadedVid url_for(video.uploaded_video)
+        json.uploaded_video url_for(video.uploaded_video)
         if video.uploaded_thumbnail.attached?
-            json.uploadedThumbnail url_for(video.uploaded_thumbnail)
+            json.uploaded_thumbnail url_for(video.uploaded_thumbnail)
         else
-            json.uploadedThumbnail nil
+            json.uploaded_thumbnail nil
         json.user do 
             json.extract! video.user, :id, :username
+            json.profile_pic url_for(user.profile_pic)
         end
     end
 end
 
 
-if video.thumbnail.attached?
-    json.thumbnail url_for(video.thumbnail)
+if video.uploaded_thumbnail.attached?
+    json.uploaded_thumbnail url_for(video.uploaded_thumbnail)
 else
-    json.thumbnail "none"
+    json.uploaded_thumbnail "none"
 end
