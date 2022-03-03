@@ -21,11 +21,9 @@ export default ({ currentUser, logout }) => {
     </div>
   );
 
-  // const upload = currentUser ? (
-  //   <div>
-  //     <Link to="" className="uploadbtn"><img src={uploadicon}/></button>
-  //   </div>
-  // )
+  const upload = currentUser.id ? (
+      <Link to= "/" className="uploadbtn"><img className="navupload" src={uploadicon}/></Link>
+  ) : ("");
 
   return (
     <header className="navs">
@@ -38,7 +36,7 @@ export default ({ currentUser, logout }) => {
         <button className="micbtn"><img className="micimg" src={microphone}/></button>
       </div>
       <div className="display">
-        <Link to= "/" className="uploadbtn"><img className="navupload" src={uploadicon}/></Link>
+        <div>{upload}</div>
         <a href="https://www.linkedin.com/in/alex-b-clark-wrightstate" target="_blank">
           <img className="navlinkedin" src={linkedin}/>
         </a>
