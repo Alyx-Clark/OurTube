@@ -64,7 +64,13 @@ GEM
     aws-sigv4 (1.4.0)
       aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.16)
+    better_errors (2.9.1)
+      coderay (>= 1.0.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
     bindex (0.8.1)
+    binding_of_caller (1.0.0)
+      debug_inspector (>= 0.0.1)
     bootsnap (1.10.3)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -81,6 +87,7 @@ GEM
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    coderay (1.1.3)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -91,6 +98,7 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     date (3.2.2)
+    debug_inspector (1.1.0)
     embargoed (2.5.0)
       i18n (>= 0.7, < 2)
       maxmind-db (~> 1.1.1)
@@ -231,6 +239,8 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk-s3
   bcrypt (~> 3.1.7)
+  better_errors
+  binding_of_caller
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
