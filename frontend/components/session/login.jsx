@@ -15,7 +15,7 @@ class Login extends React.Component {
   }
   
   logindemo(){
-    this.props.processForm({ email: "alex@ourtube", first_name: "Alex", last_name: "Clark", user_name: "demo", password: "password"})
+    this.props.processForm({ email: "user1@email.com", password: "password", user_name: "6'8 Gaming Great", first_name: "simon", last_name: "petrikov"})
   }
 
   componentWillUnmount(){
