@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ourtubelogo from '../../../app/assets/images/Ourtube.png'
+import ourtubelogo from '../../../app/assets/images/ourtube.png'
 import signinlogo from '../../../app/assets/images/signinpic.png'
 import profilepic from '../../../app/assets/images/profilepicture.png'
 import searchglass from '../../../app/assets/images/searchglass.png'
