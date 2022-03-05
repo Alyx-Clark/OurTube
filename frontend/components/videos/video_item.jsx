@@ -15,7 +15,7 @@ class VideoItem extends React.Component{
                 <div className='vi-thumbnail'>
                     <button className='vi-thumbnailbtn'>
                         <img src={video.uploadedThumbnail} className='vi-thumbnailpic'/>
-                        <span className='vi-duration'>{duration[video.id]}</span>
+                        <span className='vi-duration'>{duration[video.id - 1]}</span>
                     </button>
                 </div>
                 <div className="vi-videobottom">
