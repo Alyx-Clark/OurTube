@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ourtubelogo from '../../../app/assets/images/ourtube.png'
+import ourtubelogopic from '../../../app/assets/images/ourtubelogopic.png'
 import signinlogo from '../../../app/assets/images/signinpic.png'
 import profilepic from '../../../app/assets/images/profilepicture.png'
 import searchglass from '../../../app/assets/images/searchglass.png'
@@ -28,7 +29,10 @@ export default ({ currentUser, logout }) => {
   return (
     <header className="navs">
       <div className="ourLogo">
-        <Link to="/"><img className="navourtubepic" src={ourtubelogo}/></Link>
+        <Link to="/"><img className="nav-ourtubepic" src={ourtubelogo}/></Link>
+        {/* <Link to="/" className='nav-ourtubetext'>
+          <img className="nav-ourtubepic" src={ourtubelogopic}/>OurTube
+          </Link> */}
       </div>
       <div className="navsearchbar">
         <input type="text" className="searchbar" placeholder="Search"/>

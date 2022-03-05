@@ -3,11 +3,13 @@
     // border-top: 1px solid rgb(194, 194, 194);
     border-bottom: 1px solid rgb(222, 222, 222);
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    // background-color: green;
 }
 
 .c-category-section{
     display: flex;
-    overflow: hidden;
+    // overflow: hidden;
+    // background-color: blue;
 }
 
 .c-category {
@@ -23,6 +25,27 @@
     transition: background-color 150ms;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
+
+.c-arrow{
+    // margin-right: 1rem;
+    word-wrap: none;
+    white-space: nowrap;
+    border: none;
+    height: 10px;
+    width: 8px;
+    border-radius: 900px;
+    background: none;
+    padding: 7px 60px;
+    font-size: 21px;
+    cursor: pointer;
+    transition: background-color 150ms;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    // background-color: green;
+    color: rgb(71, 71, 71);
+}
+
+
+
 
 .c-category:hover{
     background-color: #DDD;
@@ -40,4 +63,6 @@
 
 .c-category:last-child {
     margin-right: 0;
+    position : relative;
+    // background-color: green;
 }

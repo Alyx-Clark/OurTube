@@ -1,8 +1,26 @@
 
+@font-face {
+    font-family: youtube;
+    src: url(../fontss/youtube-sans-bold.ttf);
+}
 
-.navourtubepic{
-    height: 20px;
-    width: 92px;
+.ourLogo{
+    display: flex;
+    // background-color: green;
+}
+
+.nav-ourtubetext{
+    font-family: youtube, sans-serif;
+    font-size: 18px;
+    color: black;
+    background: none;
+    border: none;
+    text-decoration: none;
+    // background-color: green;
+}
+.nav-ourtubepic{
+    height: 23px;
+    width: 90px;
     margin-right: 65px;
 }
 
