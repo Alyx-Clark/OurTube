@@ -50,7 +50,7 @@ class Signup extends React.Component {
   render() {
     return (
       <div className="signupForm">
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+        {/* <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" /> */}
         <form className="form" onSubmit={this.handleSubmit}>
           <div className="headers">
             <div className="signupLetters">

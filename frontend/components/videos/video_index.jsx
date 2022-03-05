@@ -9,6 +9,7 @@ class VideoIndex extends React.Component{
 
     componentDidMount(){
         this.props.fetchVideos();
+        // this.props.fetchUsers();
         // this.props.fetchVideos().then((videos) => {
         //     this.props.fetchUsers(video.id)
         // })
@@ -17,14 +18,10 @@ class VideoIndex extends React.Component{
     render(){
         const { videos } = this.props;
         return(
-            <div className='eachvideo'>
+            <div className='vidx-eachvideo'>
                 {
                     videos.map(video => (
-                        <VideoItem
-                        key={video.id}
-                        video={video}/>
-                        
-                        )
+                    <VideoItem key={video.id} video={video}/>)
                     )
                 }
             </div>

@@ -28,11 +28,11 @@ user4 = User.create(email: "user4@email.com", password: "wizardsrule", user_name
 userpic4 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/user4pic.png")
 user4.profile_pic.attach(io: userpic4, filename: "user4pic.png")
 
-user5 = User.create(email: "user5@email.com", password: "wizardsrule", user_name: "Two Time", first_name: "bonnibel", last_name: "bubblegum")
+user5 = User.create(email: "user5@email.com", password: "wizardsrule", user_name: "The Two Time", first_name: "bonnibel", last_name: "bubblegum")
 userpic5 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/user5pic.png")
 user5.profile_pic.attach(io: userpic5, filename: "user5pic.png")
 
-user6 = User.create(email: "user6@email.com", password: "wizardsrule", user_name: "bulletproof mullet", first_name: "Be", last_name: "MOre")
+user6 = User.create(email: "user6@email.com", password: "wizardsrule", user_name: "black steel aka bulletproof mullet", first_name: "Be", last_name: "MOre")
 userpic6 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/user6pic.png")
 user6.profile_pic.attach(io: userpic6, filename: "user6pic.png")
 
@@ -41,43 +41,43 @@ userpic7 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/user7pic.p
 user7.profile_pic.attach(io: userpic7, filename: "user7pic.png")
 
 
-vid1 = Video.create(title: "Basil Plants!", description: "Fresh home grown basil", uploader_id: 1)
+vid1 = Video.create(title: "Amazing home grown Basil Plants!", description: "Fresh home grown basil after only 3 weeks!", uploader_id: 1)
 file1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/basil.mp4")
 vid1.uploaded_video.attach(io: file1, filename: "basil.mp4")
 pic1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/basilthumb.png")
 vid1.uploaded_thumbnail.attach(io: pic1, filename: "basilthumb.png")
 
-vid2 = Video.create(title: "3d Prints!", description: "Different models made using a 3d printer!", uploader_id: 2)
+vid2 = Video.create(title: "Plastic 3d models printed with PLA and ABS plastics!", description: "Different models made using a 3d printer!", uploader_id: 2)
 file2 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/3dprints.mp4")
 vid2.uploaded_video.attach(io: file2, filename: "3dprints.mp4")
 pic2 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/3dprintsthumb.png")
 vid2.uploaded_thumbnail.attach(io: pic2, filename: "3dprintsthumb.png")
 
-vid3 = Video.create(title: "Another Survival - The Game", description: "AAA Title Limited Edition Video Game Another Survival", uploader_id: 3)
+vid3 = Video.create(title: "Another Survival - A game developed using javascript", description: "AAA Title Limited Edition Video Game Another Survival", uploader_id: 3)
 file3 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/anothersurvival.mp4")
 vid3.uploaded_video.attach(io: file3, filename: "anothersurvival.mp4")
 pic3 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/anothersurvivalthumb.png")
 vid3.uploaded_thumbnail.attach(io: pic3, filename: "anothersurvivalthumb.png")
 
-vid4 = Video.create(title: "Pen Spinning!", description: "Follow these movements to quickly master pen spinning!", uploader_id: 4)
+vid4 = Video.create(title: "How to master the ancient art of pen spinning!", description: "Follow these movements to quickly master pen spinning!", uploader_id: 4)
 file4 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/penspinning.mp4")
 vid4.uploaded_video.attach(io: file4, filename: "penspinning.mp4")
 pic4 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/penspinningthumb.png")
 vid4.uploaded_thumbnail.attach(io: pic4, filename: "penspinningthumb.png")
 
-vid5 = Video.create(title: "Minecraft!", description: "World record speed run attempt of minecraft", uploader_id: 5)
+vid5 = Video.create(title: "Minecraft speedrun world record attempt!", description: "World record speedrun attempt of minecraft", uploader_id: 5)
 file5 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/minecraft.mp4")
 vid5.uploaded_video.attach(io: file5, filename: "minecraft.mp4")
 pic5 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/minecraftthumb.png")
 vid5.uploaded_thumbnail.attach(io: pic5, filename: "minecraftthumb.png")
 
-vid6 = Video.create(title: "Splitgate!", description: "Amazing gameplay of the new video game Splitegate", uploader_id: 6)
+vid6 = Video.create(title: "New first person shooter game of the year SpliteGate!", description: "Amazing gameplay of the new video game Splitegate", uploader_id: 6)
 file6 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/splitgate.mp4")
 vid6.uploaded_video.attach(io: file6, filename: "splitgate.mp4")
 pic6 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/splitgatethumb.png")
 vid6.uploaded_thumbnail.attach(io: pic6, filename: "splitgatethumb.png")
 
-vid7 = Video.create(title: "Warzone!", description: "Amazing gameplay of the new video game Warzone", uploader_id: 7)
+vid7 = Video.create(title: "Call of Duty Warzone battle royal!", description: "Amazing gameplay of the new video game Warzone", uploader_id: 7)
 file7 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/warzone.mp4")
 vid7.uploaded_video.attach(io: file7, filename: "warzone.mp4")
 pic7 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/warzonethumb.png")

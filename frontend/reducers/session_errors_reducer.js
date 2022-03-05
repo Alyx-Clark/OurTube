@@ -5,8 +5,8 @@ import {
 } from '../actions/session_actions';
 // import { LOCATION_CHANGE } from 'connected-react-router';
   
-const sessionErrorsReducer = (state = [], action) => {
-    Object.freeze(state);
+const sessionErrorsReducer = (oldstate = [], action) => {
+    Object.freeze(oldstate);
     switch (action.type) {
       case REMOVE_ERRORS:
         return [];
@@ -15,7 +15,7 @@ const sessionErrorsReducer = (state = [], action) => {
       case RECEIVE_CURRENT_USER:
         return [];
       default:
-        return state;
+        return oldstate;
     }
 };
 

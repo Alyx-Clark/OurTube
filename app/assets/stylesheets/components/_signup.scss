@@ -1,9 +1,11 @@
+
+
 .signupForm{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .form{
@@ -21,18 +23,19 @@
     font-size: 15px;
     color: black;
     margin-bottom: 40px;
-    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    // background-color: green;
 }
 
 .headers h2{
-    font-weight: 100;
-    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
     font-size: 25px;
     margin-bottom: 20px;
 }
 
 .headers h3{
-    font-weight: 100;
+    font-weight: 300;
     font-family: "Roboto", sans-serif;
     font-size: 16px
 }
@@ -196,8 +199,8 @@
     top: -7px;
     left: 3px;
     z-index: 10;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 400;
     color: #1A73E8;
 }
 

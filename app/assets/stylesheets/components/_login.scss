@@ -1,24 +1,24 @@
 .headersLogin{
     // font-size: 30px;
     color: black;
-    font-weight: 100;
     margin-bottom: 50px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     align-items: center;
     margin: auto;
     width: 50%;
 }
 
+
 .letters{
     margin-bottom: 20px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .headersLogin h3{
     font-size: 15px;
     display: flex;
     justify-content: center;
-    font-weight: 100;
+    font-weight: 400;
     margin-top: 20px;
     margin-bottom: 40px;
 }
@@ -26,7 +26,7 @@
 .headersLogin h2{
     display: flex;
     justify-content: center;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 23px;
 }
 
@@ -35,7 +35,7 @@
     color: #1A73E8;;
     cursor: pointer;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .forgotPass:hover{
