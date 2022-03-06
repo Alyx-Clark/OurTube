@@ -1,8 +1,12 @@
 class Api::VideosController < ApplicationController
 
     def show
-        @video = Video.find(params[:id])
-        render :show
+        @video = Video.find_by(id: params[:id])
+        if @video
+            render :show
+        else
+            render json: ["Video failed to load"], status: 422
+        end
     end
 
     def index

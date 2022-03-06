@@ -10,6 +10,8 @@ const mSTP = (state, ownProps) => ({
     users: state.entities.users
 })
 
+// debugger 
+
 const mDTP = dispatch => ({
     fetchVideo: (videoId) => dispatch(fetchVideo(videoId)),
     fetchVideos: () => dispatch(fetchVideos()),

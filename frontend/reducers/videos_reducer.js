@@ -8,7 +8,7 @@ const videosReducer = (oldState = {}, action) => {
         case RECEIVE_ALL_VIDEOS:
             return action.videos;
         case RECEIVE_VIDEO:
-            nextState[action.video.id]= action.video;
+            nextState[action.video.id] = action.video;
             return nextState;
         case REMOVE_VIDEO:
             delete nextState[action.videoId];

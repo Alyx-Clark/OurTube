@@ -9,7 +9,7 @@ class VideoItem extends React.Component{
 
     render(){
         const { video } = this.props;
-        const duration = ["0", "0:14", "0:13", "0:31", "0:16", "0:04", "0:04", "0:04", "0:20", "0:32", "0:22" ]
+        const duration = ["0", "0:14", "0:13", "0:31", "0:16", "0:04", "0:04", "0:04", "0:12", "0:19", "0:27" ]
 
         return ( 
             <div className="vi-videos">
