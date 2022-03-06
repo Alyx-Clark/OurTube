@@ -1,3 +1,31 @@
 // .home{
 //     // background-color: green;
 // }
+
+::-webkit-scrollbar{
+    background-color: rgb(248, 248, 248);
+    width: 9px;
+}
+
+::-webkit-scrollbar-track{
+    // background: blue;
+    // width: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(85, 85, 85);
+    // background: green;
+    border-radius: 999px;
+    background-clip: padding-box;
+    // width: 5px;
+
+
+
+
+    border-right: 2px solid rgb(248, 248, 248);
+    // border-right: 4px solid green;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(143, 143, 143);
+}

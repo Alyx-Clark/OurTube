@@ -17,9 +17,10 @@ class Categories extends React.Component{
                     <button className="c-category">Music</button>
                     <button className="c-category">Tools</button>
                     <button className="c-category">Gaming Laptops</button>
-                    <button className="c-category">3D Printing</button>
+                    <button className="c-category">3-D Printing</button>
                     <button className="c-category">Mechanical Engineering</button>
-                    <button className="c-category">CAD</button>
+                    <button className="c-category">CAD</button>     
+                    <button className="c-category">AI</button>     
                     <button className="c-arrow"><img src={arrow}/></button>
                 </section>
             </div>
