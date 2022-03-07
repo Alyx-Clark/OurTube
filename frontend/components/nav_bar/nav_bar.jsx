@@ -31,7 +31,7 @@ export default ({ currentUser, logout }) => {
     <header className="navs">
       <div className="ourLogo">
         <button className="sb-burger"><img src={hamburger} className='sb-burgerimg'/></button>
-        <Link to="/"><img className="nav-ourtubepic" src={ourtubelogo}/></Link>
+        <Link to="/"><img className="nav-ourtubepic" src={github}/></Link>
         {/* <Link to="/" className='nav-ourtubetext'>
           <img className="nav-ourtubepic" src={ourtubelogopic}/>OurTube
           </Link> */}
