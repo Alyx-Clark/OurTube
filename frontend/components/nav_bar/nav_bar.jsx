@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ourtubelogo from '../../../app/assets/images/ourtube.png'
+import test from '../../../app/assets/images/test.png'
 import ourtubelogopic from '../../../app/assets/images/ourtubelogopic.png'
 import signinlogo from '../../../app/assets/images/signinpic.png'
 import profilepic from '../../../app/assets/images/profilepicture.png'
@@ -31,7 +31,7 @@ export default ({ currentUser, logout }) => {
     <header className="navs">
       <div className="ourLogo">
         <button className="sb-burger"><img src={hamburger} className='sb-burgerimg'/></button>
-        <Link to="/"><img className="nav-ourtubepic" src={ourtubelogo}/></Link>
+        <Link to="/"><img className="nav-ourtubepic" src={test}/></Link>
         {/* <Link to="/" className='nav-ourtubetext'>
           <img className="nav-ourtubepic" src={ourtubelogopic}/>OurTube
           </Link> */}
