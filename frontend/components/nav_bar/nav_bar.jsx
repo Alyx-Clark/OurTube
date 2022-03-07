@@ -10,6 +10,7 @@ import uploadicon from '../../../app/assets/images/uploadicon.png'
 import linkedin from '../../../app/assets/images/linkedin.png'
 import github from '../../../app/assets/images/github.png'
 import hamburger from '../../../app/assets/images/sb-hamburger.png'
+import testing from '../../../app/assets/images/testing.jpg'
 
 export default ({ currentUser, logout }) => {
 
@@ -31,7 +32,7 @@ export default ({ currentUser, logout }) => {
     <header className="navs">
       <div className="ourLogo">
         <button className="sb-burger"><img src={hamburger} className='sb-burgerimg'/></button>
-        <Link to="/"><img className="nav-ourtubepic" src={test}/></Link>
+        <Link to="/"><img className="nav-ourtubepic" src={testing}/></Link>
         {/* <Link to="/" className='nav-ourtubetext'>
           <img className="nav-ourtubepic" src={ourtubelogopic}/>OurTube
           </Link> */}
