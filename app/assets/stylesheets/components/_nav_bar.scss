@@ -9,11 +9,15 @@
     border: none;
     padding: 0;
     cursor: pointer;
+    // background-color: red;
+    // z-index: 6;
+    padding-bottom: 10px;
 }
 
-.sb-burgerimg{
-    // z-index: 5;
-}
+// .sb-burgerimg{
+//     z-index: 7;
+//     position: relative;
+// }
 
 .ourLogo{
     padding-left: 6px;
@@ -21,6 +25,9 @@
     // background-color: green;
     align-items: center;
     padding-right: 40px;
+    // position: absolute;
+    // z-index: 6;
+    padding-top: 8px;
 }
 
 .nav-ourtubetext{

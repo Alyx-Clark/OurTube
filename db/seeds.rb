@@ -57,11 +57,11 @@ userpic11 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/user11pic
 user11.profile_pic.attach(io: userpic11, filename: "user11pic.png")
 
 
-vid1 = Video.create(title: "filler", description: "filler", uploader_id: 1)
-file1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/filler.mp4")
-vid1.uploaded_video.attach(io: file1, filename: "filler.mp4")
-pic1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/fillerthumb.png")
-vid1.uploaded_thumbnail.attach(io: pic1, filename: "fillerthumb.png")
+vid1 = Video.create(title: "THIS HAPPENED...(not clickbait)", description: "Wow this was one of the most surprising things!", uploader_id: 1)
+file1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/rocket.mp4")
+vid1.uploaded_video.attach(io: file1, filename: "rocket.mp4")
+pic1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/rocketthumb.png")
+vid1.uploaded_thumbnail.attach(io: pic1, filename: "rocketthumb.png")
 
 vid2 = Video.create(title: "Amazing home grown Basil Plants?", description: "Fresh home grown basil after only 3 weeks!", uploader_id: 2)
 file2 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/basil.mp4")

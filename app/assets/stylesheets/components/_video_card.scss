@@ -8,11 +8,13 @@
     grid-template-columns: 150px;
     background-color: rgb(248, 248, 248);
     // background-color: orange;
-    // padding-left: 83px;
+    padding-left: 3.5%;
     // padding-top: 22px;
     // height: 700px;
     // height: 1023px;
-    height: 25vh;
+    height: 9vh;
+    width: 380px;
+    padding-top: 23px;
     // background-color: green;
 }
 
@@ -40,7 +42,8 @@
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    // background-color: green;
+    // background-color: blue;
+    // width: 100%;
 }
 
 .vc-thumbnailbtn{
@@ -51,7 +54,7 @@
 
 .vc-thumbnailpic{
     height: 95px;
-    width: 160px;
+    width: 165px;
     cursor: pointer;
 }
 
@@ -59,16 +62,33 @@
     display: flex;
     flex-direction: column;
     text-decoration: none;
+    text-decoration-style: none;
+}
+
+.vc-link{
+    text-decoration: none;
+    display: flex;
+    // width: 100%;
+    width: 380px;
+    // background-color: orange;
 }
 
 .vc-title{
-    text-decoration: none;
-    color: black;
     // background-color: green;
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+    color: #030303;
+    font-weight: 500;
+    line-height: 20px;
+    padding-top: 3px;
 }
 
 .vc-videobottom{
-    display:flex;
+    // display:flex;
+    // text-decoration: none;
+    // text-decoration-style: none;
+    // flex-direction: column;
+    // justify-content: space-evenly;
 }
 
 .vc-username{

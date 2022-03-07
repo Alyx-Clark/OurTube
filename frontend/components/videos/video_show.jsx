@@ -26,17 +26,20 @@ class VideoShow extends React.Component {
 
 
     render(){
+        if(!this.props.video) return null;
         const { video, users, videos } = this.props
         return(
-            <div>
-                <NavBarContainer />
-                <VideoWatch source={video.uploadedVideo} users={users} />
-                <div className='vs-videos'>
-                    {
-                        videos.map(video => (
-                            <VideoUpnext key={video.id} video={video} />
-                        ))
-                    }
+            <div className='video-show'>
+                <NavBarContainer className="vs-navbar"/>
+                <div className="vs-bottom">
+                    <VideoWatch source={video.uploadedVideo} users={users} />
+                    <div className='vs-videos'>
+                        {
+                            videos.map(video => (
+                                <VideoUpnext key={video.id} video={video} />
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         )

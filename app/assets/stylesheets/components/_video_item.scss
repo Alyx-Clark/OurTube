@@ -21,9 +21,9 @@
     // background-color: green;
 }
 
-.vi-videos:nth-child(1){
-    visibility: hidden;
-}
+// .vi-videos:nth-child(1){
+//     visibility: hidden;
+// }
 
 .vi-videos:nth-child(11){
     // background-color: green;
@@ -142,6 +142,13 @@
     color: rgb(107, 107, 107);
     transition: color 200ms;
     font-size: 14px;
+}
+
+.vi-verified{
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    // padding-top: 15px;
 }
 
 .vi-username:hover{

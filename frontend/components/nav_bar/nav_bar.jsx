@@ -30,7 +30,7 @@ export default ({ currentUser, logout }) => {
 
   return (
     <header className="navs">
-      <div className="ourLogo">
+      <div className="ourLogo">  
         <button className="sb-burger"><img src={hamburger} className='sb-burgerimg'/></button>
         <Link to="/"><img className="nav-ourtubepic" src={testing}/></Link>
         {/* <Link to="/" className='nav-ourtubetext'>
