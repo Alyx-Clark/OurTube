@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBarContainer from '../nav_bar/nav_bar_container';
+import VideoUpnext from './videoUpnext';
 import VideoWatch from './video_watch';
 
 class VideoShow extends React.Component {
@@ -13,6 +14,7 @@ class VideoShow extends React.Component {
         this.props.fetchUsers();
         if(!this.props.match) { return null}
         this.props.fetchVideo(this.props.match.params.videoId);
+        this.props.fetchVideos();
     }
 
     componentDidUpdate(prevProp) {
@@ -24,11 +26,18 @@ class VideoShow extends React.Component {
 
 
     render(){
-        const { video, users } = this.props
+        const { video, users, videos } = this.props
         return(
             <div>
                 <NavBarContainer />
-                <VideoWatch source={video.uploadedVideo} users={users}/>
+                <VideoWatch source={video.uploadedVideo} users={users} />
+                <div className='vs-videos'>
+                    {
+                        videos.map(video => (
+                            <VideoUpnext key={video.id} video={video} />
+                        ))
+                    }
+                </div>
             </div>
         )
     }

@@ -1,0 +1,85 @@
+
+
+
+.vc-eachvideo{
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    // row-gap: 90px;
+    grid-template-columns: 150px;
+    background-color: rgb(248, 248, 248);
+    // background-color: orange;
+    // padding-left: 83px;
+    // padding-top: 22px;
+    // height: 700px;
+    // height: 1023px;
+    height: 25vh;
+    // background-color: green;
+}
+
+// .vi-videos:nth-child(1){
+//     visibility: hidden;
+// }
+
+.vc-duration{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .55);
+    color: white;
+    z-index: 1;
+    right: 5px;
+    bottom: 8px;
+    padding: 3px 5px;
+    border-radius: 2px;
+    font-size: 12px;
+    // padding-right: 10px;
+    margin-right: 10px;
+}
+
+.vc-videos{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    // background-color: green;
+}
+
+.vc-thumbnailbtn{
+    background: none;
+    border: none;
+}
+
+
+.vc-thumbnailpic{
+    height: 95px;
+    width: 160px;
+    cursor: pointer;
+}
+
+.vc-viddetails{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.vc-title{
+    text-decoration: none;
+    color: black;
+    // background-color: green;
+}
+
+.vc-videobottom{
+    display:flex;
+}
+
+.vc-username{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #606060;
+}
+
+.vc-data{
+    color: #606060;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 12px;
+}
