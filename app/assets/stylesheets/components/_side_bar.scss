@@ -3,17 +3,24 @@
     src: url(../fontss/youtube-sans-medium.ttf);
 }
 
+.sb-container{
+    position: sticky;
+    top: 0;
+    // z-index: 4;
+    // background-color: green;
+}
+
 .sb-sidebar{
     position: absolute;
     width: 70px;
     height: 150vh;
-    background-color: white
-    // background-color: white;
+    background-color: white;
+    // background-color: green;
     // align-items: center;
 }
 
 .sb-icons{
-    // padding-top: 80px;
+    padding-top: 31px;
     justify-content: space-evenly;
     height: 30%;
     display: flex;
@@ -24,10 +31,12 @@
 
 .sb-groups{
     // background-color: orange;
-
+    // height: 30px;
 }
 
 .sb-img{
+    height: 20px;
+    width: 15px;
     
 }
 
@@ -38,7 +47,7 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    background-color: red;
+    // background-color: red;
 }
 
 .sb-button:hover{
@@ -54,4 +63,5 @@
 .sb-icon{
     // width: 90%;
     // height: 90%;
+    padding-top: 5px;
 }
