@@ -18,12 +18,14 @@ class VideoIndex extends React.Component{
     render(){
         const { videos } = this.props;
         return(
-            <div className='vidx-eachvideo'>
-                {
-                    videos.map(video => (
-                    <VideoItem key={video.id} video={video}/>)
-                    )
-                }
+            <div className='vidx-background'>
+                <div className='vidx-eachvideo'>
+                    {
+                        videos.map(video => (
+                        <VideoItem key={video.id} video={video}/>)
+                        )
+                    }
+                </div>
             </div>
         )
     }

@@ -5,7 +5,7 @@ function VideoWatch(props){
     const { source} = props;
     return (
         <div className="vw-main">
-            <video src={source.uploadedVideo} controls autoPlay></video>
+            <video src={source} className="vw-src" controls autoPlay></video>
         </div>
     )
 

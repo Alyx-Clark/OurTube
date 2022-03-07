@@ -9,6 +9,7 @@ import microphone from '../../../app/assets/images/microphone.png'
 import uploadicon from '../../../app/assets/images/uploadicon.png'
 import linkedin from '../../../app/assets/images/linkedin.png'
 import github from '../../../app/assets/images/github.png'
+import hamburger from '../../../app/assets/images/sb-hamburger.png'
 
 export default ({ currentUser, logout }) => {
 
@@ -29,6 +30,7 @@ export default ({ currentUser, logout }) => {
   return (
     <header className="navs">
       <div className="ourLogo">
+        <button className="sb-burger"><img src={hamburger}/></button>
         <Link to="/"><img className="nav-ourtubepic" src={ourtubelogo}/></Link>
         {/* <Link to="/" className='nav-ourtubetext'>
           <img className="nav-ourtubepic" src={ourtubelogopic}/>OurTube

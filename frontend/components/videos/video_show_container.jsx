@@ -1,7 +1,7 @@
 import React from "react";
 import VideoShow from './video_show';
-import { fetchVideo, fetchVideos } from "../../util/video_api_util";
-import { fetchUsers } from "../../util/user_api_util";
+import { fetchVideo, fetchVideos } from "../../actions/video_actions";
+import { fetchUsers } from "../../actions/user_actions";
 import { connect } from "react-redux";
 
 const mSTP = (state, ownProps) => ({

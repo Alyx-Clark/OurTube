@@ -1,0 +1,57 @@
+@font-face {
+    font-family: youtubemed;
+    src: url(../fontss/youtube-sans-medium.ttf);
+}
+
+.sb-sidebar{
+    position: absolute;
+    width: 70px;
+    height: 150vh;
+    background-color: white
+    // background-color: white;
+    // align-items: center;
+}
+
+.sb-icons{
+    // padding-top: 80px;
+    justify-content: space-evenly;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    // background-color: blue;
+    align-items: center;
+}
+
+.sb-groups{
+    // background-color: orange;
+
+}
+
+.sb-img{
+    
+}
+
+.sb-button{
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: red;
+}
+
+.sb-button:hover{
+    background-color: rgb(233, 233, 233);
+}
+
+.sb-text{
+    font-size: 10px;
+    font-family: Roboto, Arial, sans-serif;
+    color: #030303;
+}
+
+.sb-icon{
+    // width: 90%;
+    // height: 90%;
+}
