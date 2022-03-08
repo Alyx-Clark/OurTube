@@ -17,4 +17,6 @@ class Video < ApplicationRecord
         through: :comments,
         source: :commenter
 
+        
+
 end

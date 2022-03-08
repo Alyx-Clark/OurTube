@@ -1,7 +1,5 @@
-json.comment do
-    json.partial! '/api/comments/comment', comment: @comment
-  end
-  
-  json.author do
-    json.partial! '/api/users/user', user: @comment.author
-  end
+json.extract! @comment, :id, :body, :commenter_id, :video_id
+json.date time_ago_in_words(@comment.created_at) + " ago"
+json.commenter do 
+  json.extract! @comment.commenter, :id, :username, :profile_pic
+end
