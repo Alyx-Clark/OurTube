@@ -23,7 +23,7 @@
 // }
 
 .vc-duration{
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     font-weight: 500;
     position: absolute;
     background-color: rgba(0, 0, 0, .55);
@@ -35,7 +35,12 @@
     border-radius: 2px;
     font-size: 12px;
     // padding-right: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
+}
+
+.vc-thumbnail{
+    position: relative;
+    display: flex;
 }
 
 .vc-videos{
@@ -49,6 +54,7 @@
 .vc-thumbnailbtn{
     background: none;
     border: none;
+    // background-color: green;
 }
 
 
@@ -102,4 +108,5 @@
     color: #606060;
     font-family: Roboto, Arial, sans-serif;
     font-size: 12px;
+    padding-top: 6px;
 }

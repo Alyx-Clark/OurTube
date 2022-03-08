@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NavBarContainer from '../nav_bar/nav_bar_container';
 import VideoUpnext from './videoUpnext';
 import VideoWatch from './video_watch';
+import VideoWatchBottom from './video_watch_bottom';
 
 class VideoShow extends React.Component {
     constructor(props){
@@ -32,7 +33,10 @@ class VideoShow extends React.Component {
             <div className='video-show'>
                 <NavBarContainer className="vs-navbar"/>
                 <div className="vs-bottom">
-                    <VideoWatch source={video.uploadedVideo} users={users} />
+                    <div className='vs-videocolumn'>
+                        <VideoWatch source={video.uploadedVideo} users={users} />
+                        <VideoWatchBottom video={video} />
+                    </div>
                     <div className='vs-videos'>
                         {
                             videos.map(video => (

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import verfied from '../../../app/assets/images/verified.png'
 
 class VideoCard extends React.Component{
     constructor(props){
@@ -8,7 +9,7 @@ class VideoCard extends React.Component{
 
     render(){
         const { video } = this.props;
-        const duration = ["0", "0:14", "0:13", "0:31", "0:16", "0:04", "0:04", "0:04", "0:12", "0:19", "0:27" ]
+        const duration = ["0:19", "0:14", "0:13", "0:31", "0:16", "0:04", "0:04", "0:04", "0:12", "0:19", "0:27" ]
         return(
             <div className="vc-eachvideo">
                 <div className="vc-videos">
@@ -22,7 +23,7 @@ class VideoCard extends React.Component{
                         <div className="vc-videobottom">
                             <div className="vc-viddetails">
                                 <span className='vc-title'>{video.title}</span>
-                                <span className="vc-username">{video.user.userName}</span>
+                                <span className="vc-username">{video.user.userName} <img src={verfied} className='vi-verified' /></span>
                                 <div className='vc-data'>
                                     <span>{Math.floor(Math.random() * (999 - 10) + 10)}k views </span>
                                     • 

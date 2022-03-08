@@ -1,0 +1,48 @@
+.vw-container{
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    // position: relative;
+    // flex-direction: column;
+    // background-color: green;
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.vw-title{
+    font-size: 18px;
+    color: #030303;
+    font-family: Roboto, Arial, sans-serif;
+    padding-top: 20px;
+}
+
+.vw-under{
+    display: flex;
+    font-family: Roboto, Arial, sans-serif;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vw-data{
+    font-size: 14px;
+    color: #606060;
+    font-family: Roboto, Arial, sans-serif;
+    
+}
+
+.vw-tools{
+    font-size: 14px;
+    color: #030303;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.vw-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #030303;
+    // color: green;
+    font-family: Roboto, Arial, sans-serif;
+}
