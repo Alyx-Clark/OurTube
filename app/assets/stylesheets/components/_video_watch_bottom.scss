@@ -6,14 +6,26 @@
     // position: relative;
     // flex-direction: column;
     // background-color: green;
-    border-bottom: 1px solid rgb(214, 214, 214);
+    
+}
+
+.vw-info{
+    border-bottom: 1px solid rgb(224, 224, 224);
+    height: 100px;
+}
+
+.vw-tags{
+    color: #065FD4;
+    font-size: 12px;
+    font-family: Roboto, Arial, sans-serif;
+    padding-top: 15px;
 }
 
 .vw-title{
     font-size: 18px;
     color: #030303;
     font-family: Roboto, Arial, sans-serif;
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
 .vw-under{
@@ -35,6 +47,14 @@
     font-size: 14px;
     color: #030303;
     font-family: Roboto, Arial, sans-serif;
+    display: flex;
+}
+
+.vw-button-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
 }
 
 .vw-button{
@@ -44,5 +64,89 @@
     font-size: 14px;
     color: #030303;
     // color: green;
+    // background-color: green;
+    font-family: Roboto, Arial, sans-serif;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.vw-text{
+    display: flex;
+    padding-left: 6px;
+    font-weight: 500;
+}
+
+.vw-dots{
+    width: 25px;
+}
+
+.vw-clip{
+    width: 20px;
+
+}
+
+.vw-dislike{
+    width: 20px;
+}
+
+
+// -------------------------------------------------
+
+
+
+.vw-user{
+    height: 110px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.vw-user-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.vw-user-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.vw-user-words{
+    display: flex;
+    flex-direction: column;
+    padding-left: 17px;
+}
+
+.vw-sub-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.vw-subscribers{
+    font-size: 12px;
+    font-family: Roboto, Arial, sans-serif;
+    color: #606060;
+    padding-top: 5px;
+}
+
+.vw-username{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #030303;
+    font-weight: 500;
+}
+
+
+
+.vw-description{
+    padding-top: 17px;
+    padding-left: 66px;
+    font-size: 14px;
+    color: #030303;
     font-family: Roboto, Arial, sans-serif;
 }

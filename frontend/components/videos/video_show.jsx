@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBarContainer from '../nav_bar/nav_bar_container';
-import VideoUpnext from './videoUpnext';
+import VideoUpnext from './video_up_next';
 import VideoWatch from './video_watch';
 import VideoWatchBottom from './video_watch_bottom';
 
@@ -25,6 +25,10 @@ class VideoShow extends React.Component {
         }
     }
 
+    videosSide(){
+       
+    }
+
 
     render(){
         if(!this.props.video) return null;
@@ -40,7 +44,11 @@ class VideoShow extends React.Component {
                     <div className='vs-videos'>
                         {
                             videos.map(video => (
-                                <VideoUpnext key={video.id} video={video} />
+                                // if(this.props.match.params.videoId !== video.id){
+                                    <VideoUpnext key={video.id} video={video} />
+                                // } else{
+                                    // null
+                                // }
                             ))
                         }
                     </div>

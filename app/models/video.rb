@@ -13,4 +13,8 @@ class Video < ApplicationRecord
         foreign_key: :video_id,
         class_name: :Comment
 
+    has_many :commenters,
+        through: :comments,
+        source: :commenter
+
 end
