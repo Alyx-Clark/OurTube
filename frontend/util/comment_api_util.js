@@ -1,3 +1,10 @@
+// export const fetchComments = videoId => (
+//     $.ajax({
+//         method: 'GET',
+//         url: '/api/comments'
+//     })
+// )
+
 export const createComment = comment => (
     $.ajax({
         method: 'POST',

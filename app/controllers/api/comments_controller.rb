@@ -1,14 +1,18 @@
 class Api::CommentsController < ApplicationController
     before_action :require_logged_in
+
+    def index
+      @comments = Comment.all
+      render: index
+    end
   
     def create
-      @video = Video.find(params[:video_id])
-      @comment = @video.comments.new(comment_params)
+      @comment = Comment.new(comment_params)
   
       if @comment.save
         render :show
       else
-        render json: @comment.errors.full_messages, status: :unprocessable_entity
+        render json: ["Need to be signed in to post"], status: 422
       end
     end
 
@@ -18,7 +22,7 @@ class Api::CommentsController < ApplicationController
       if @comment.destroy
         render json: @comment.id
       else
-        render json: @comment.errros.full_messages, status: :unprocessable_entity
+        render json: ["Cannot delete"], status: 403
       end
     end
   

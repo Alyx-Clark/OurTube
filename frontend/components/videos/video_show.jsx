@@ -4,18 +4,22 @@ import NavBarContainer from '../nav_bar/nav_bar_container';
 import VideoUpnext from './video_up_next';
 import VideoWatch from './video_watch';
 import VideoWatchBottom from './video_watch_bottom';
+import CommentIndex from '../comments/comment_index';
 
 class VideoShow extends React.Component {
     constructor(props){
         super(props);
     }
 
+
     componentDidMount(){
         // console.log("thisiscodfmaoife")
         this.props.fetchUsers();
         if(!this.props.match) { return null}
+        // console.log("hi")
+        // console.log("thisiscodfmaoifelllllllllllllllllll")
         this.props.fetchVideo(this.props.match.params.videoId);
-        this.props.fetchVideos();
+        // this.props.fetchVideos();
     }
 
     componentDidUpdate(prevProp) {
@@ -25,9 +29,9 @@ class VideoShow extends React.Component {
         }
     }
 
-    videosSide(){
+    // videosSide(){
        
-    }
+    // }
 
 
     render(){
@@ -40,6 +44,7 @@ class VideoShow extends React.Component {
                     <div className='vs-videocolumn'>
                         <VideoWatch source={video.uploadedVideo} users={users} />
                         <VideoWatchBottom video={video} />
+                        <CommentIndex video={video} />
                     </div>
                     <div className='vs-videos'>
                         {

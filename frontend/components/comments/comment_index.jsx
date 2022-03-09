@@ -1,24 +1,38 @@
 import React from "react";
-import commentsReducer from "../../reducers/comments_reducer";
+import CommentCard from "./comment_card";
 
 class CommentIndex extends React.Component{
     constructor(props){
         super(props)
+
+
     }
 
+    componentDidMount(){
+        // this.props.fetchVideo(this.props.video.id)
+        // console.log("mom")
+    }
+
+    
 
     render(){
-        const {comments, deleteComment, userId} = this.props;
-        return(
-            <div>
-                {
-                    comments.map(comment => (
-                        <CommentCard key={comment.id} comment={comment} deleteComment={deleteComment} userId={userId}/>
-                    ))
-                    
-                }
-            </div>
-        )
+        const {comments, deleteComment, userId, video} = this.props;
+        console.log(video.comments)
+        if(video.comments){
+            return(
+                <div>
+                    {
+                        video.comments.map(comment => (
+                            <CommentCard key={comment.id} comment={comment} deleteComment={deleteComment} userId={userId}/>
+                        ))
+                        
+                    }
+                </div>
+            )
+        }else{
+            return <h1>One sec :D</h1>
+        }
+        // console.log("hi")
     }
 }
 

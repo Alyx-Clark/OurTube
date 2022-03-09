@@ -9,7 +9,10 @@ const videosReducer = (oldState = {}, action) => {
         case RECEIVE_ALL_VIDEOS:
             return action.videos;
         case RECEIVE_VIDEO:
-            // console.log("Hi")
+            console.log("videosreducerreceive")
+            // const video = Object.assign({}, action.video)
+            // delete video.comments
+            // return Object.assign({}, oldState, { [action.video.id]: video });
             nextState[action.video.id] = action.video;
             return nextState;
         case REMOVE_VIDEO:
