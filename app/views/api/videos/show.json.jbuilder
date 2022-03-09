@@ -16,6 +16,7 @@ json.comments @video.comments do |comment|
     json.body comment.body
     json.date time_ago_in_words(comment.created_at) + " ago"
     json.commenter do
-        json.extract! comment.commenter, :id, :user_name, :profile_pic
+        json.extract! comment.commenter, :id, :user_name
+        json.profile_pic url_for(comment.commenter.profile_pic)
     end
 end

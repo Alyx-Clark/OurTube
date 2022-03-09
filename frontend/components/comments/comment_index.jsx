@@ -20,10 +20,10 @@ class CommentIndex extends React.Component{
         console.log(video.comments)
         if(video.comments){
             return(
-                <div>
+                <div className="ci-comments">
                     {
                         video.comments.map(comment => (
-                            <CommentCard key={comment.id} comment={comment} deleteComment={deleteComment} userId={userId}/>
+                            <CommentCard key={comment.id} comment={comment} commenter={comment.commenter} deleteComment={deleteComment} userId={userId}/>
                         ))
                         
                     }
