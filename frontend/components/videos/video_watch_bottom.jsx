@@ -50,7 +50,7 @@ class VideoWatchBottom extends React.Component{
                         <div className="vw-data">
                             <span>{this.state.views} views </span>
                             •
-                            <span>{video.released}</span>
+                            <span> {video.released}</span>
                         </div>
                         <div className="vw-tools">
                             <div className="vw-button-text">

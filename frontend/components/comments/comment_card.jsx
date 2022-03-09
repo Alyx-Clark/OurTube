@@ -11,9 +11,11 @@ class CommentCard extends React.Component{
         const {comment, userId, commenter} = this.props;
         return(
             <div className="cc-comment">
+                <div>
+                    <img className="cc-userpic" src={commenter.profilePic}/>
+                </div>
                 <div className="cc-body">
                     <div className="cc-bodytop">
-                        <img className="cc-userpic" src={commenter.profilePic}/>
                         <div className="cc-titledate">
                             <span className="cc-username">{commenter.userName} </span>
 
@@ -22,9 +24,9 @@ class CommentCard extends React.Component{
                     </div>
                     <p className="cc-text">{comment.body}</p>
                     <div className="cc-icons">
-                        <button className="cc-iconbtn"><img src={thumbup}/></button>
-                        <button className="cc-iconbtn"><img src={thumbdown}/></button>
-                        <button className="cc-iconbtn">REPLY</button>
+                        <button className="cc-iconbtn"><img src={thumbup} className="cc-thumb"/></button>
+                        <button className="cc-iconbtn"><img src={thumbdown} className="cc-thumbdown"/></button>
+                        <button className="cc-iconbtn"><span className="cc-reply">REPLY</span></button>
                     </div>
                 </div>
             </div>
