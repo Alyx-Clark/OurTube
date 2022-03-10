@@ -1,6 +1,8 @@
 .cf-form{
     display: flex;
     flex-direction: column;
+    // background-color: green;
+    height: 125px;
 }
 
 .cf-top{
@@ -11,9 +13,15 @@
 
 .cf-bottom{
     display: flex;
-    padding-top: 20px;
+    padding-top: 21px;
 }
 
+.cf-proimg{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: none;
+}
 
 
 .cf-commentslength{

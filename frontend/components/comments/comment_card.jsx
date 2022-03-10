@@ -9,7 +9,7 @@ class CommentCard extends React.Component{
     }
 
     render(){
-        const {comment, userId, commenter} = this.props;
+        const {comment, userId, commenter, deleteComment} = this.props;
         return(
             <div className="cc-comment">
                 <div>

@@ -11,15 +11,17 @@ import linkedin from '../../../app/assets/images/linkedin.png'
 import github from '../../../app/assets/images/github.png'
 import hamburger from '../../../app/assets/images/sb-hamburger.png'
 import testing from '../../../app/assets/images/testing.jpg'
+import finaldoc from '../../../app/assets/images/finaldoc.png'
 
-export default ({ currentUser, logout }) => {
+export default ({ currentUser, logout, user}) => {
   let url = window.location.href.split('/')
   // console.log(url)
   let ele = url[4]
-  // console.log(ele)
+  // console.log(currentUser.id)
+  console.log(user)
   const display = currentUser.id ? (
     <div>
-      <button onClick={logout} className="propicbtn"><img className="profilepicc" src={thedoc}/></button>
+      <button onClick={logout} className="propicbtn"><img className="profilepicc" src={user.profilePic}/></button>
     </div>
   ) : (
     <div>

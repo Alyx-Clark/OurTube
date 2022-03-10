@@ -12,9 +12,13 @@ Video.destroy_all
 Comment.destroy_all
 User.destroy_all
 
+
+
+
+
 user1 = User.create(email: "user1@email.com", password: "password", user_name: "6'8 Gaming Great", first_name: "simon", last_name: "petrikov")
-userpic1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/thedoc.png")
-user1.profile_pic.attach(io: userpic1, filename: "thedoctor.png")
+userpic1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/user1pic.png")
+user1.profile_pic.attach(io: userpic1, filename: "user1pic.png")
 
 user2 = User.create(email: "user2@email.com", password: "wizardsrule", user_name: "EthopianCatepillar", first_name: "finn", last_name: "mertens")
 userpic2 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/user2pic.png")
@@ -55,6 +59,10 @@ user10.profile_pic.attach(io: userpic10, filename: "user10pic.png")
 user11 = User.create(email: "user11@email.com", password: "wizardsrule", user_name: "LamborghiniDiabloVT", first_name: "Earl", last_name: "Lemongrab")
 userpic11 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/user11pic.png")
 user11.profile_pic.attach(io: userpic11, filename: "user11pic.png")
+
+demo1 = User.create(email: "demo@email.com", password: "password", user_name: "docterdemo", first_name: "tree", last_name: "trunks")
+demopic1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/finaldoc.png")
+demo1.profile_pic.attach(io: demopic1, filename: "finaldoc.png")
 
 
 vid1 = Video.create(title: "THIS HAPPENED...(not clickbait)", description: "Wow this was one of the most surprising things!", uploader_id: 1)

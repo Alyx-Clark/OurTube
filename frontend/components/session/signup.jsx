@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import errorsimg from '../../../app/assets/images/errors.png'
+import guestuser from '../../../app/assets/images/guestuser.png'
 
 class Signup extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class Signup extends React.Component {
       first_name: '',
       last_name: '',
       user_name: '',
-      password: ''
+      password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     // this.logindemo = this.logindemo.bind(this);

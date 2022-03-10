@@ -8,7 +8,7 @@ const commentsReducer = (oldState = [], action) => {
     // console.log("hel")
     switch (action.type) {
         case RECEIVE_VIDEO:
-            return action.video.comments
+            return action.video.comments.reverse()
         case RECEIVE_COMMENT:
             nextState.unshift(action.comment);
             return nextState;

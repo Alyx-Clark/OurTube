@@ -2,7 +2,7 @@
 .ci-comments{
     display: flex;
     flex-direction: column;
-    
+    padding-bottom: 140px;
     // background-color: green;
 }
 
@@ -10,7 +10,9 @@
     display: flex;
     font-family: Roboto, Arial, sans-serif;
     // padding-top: 15px;
-    padding-bottom: 25px;
+    padding-bottom: 12px;
+    // background-color: green;
+    margin-top: 8px;
 }
 
 .cc-body{
@@ -29,6 +31,10 @@
 
 .cc-userpic{
     // padding-bottom: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: none;
 }
 
 .cc-titledate{

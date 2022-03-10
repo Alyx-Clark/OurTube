@@ -9,7 +9,6 @@ class Login extends React.Component {
     this.state = {
       user_name: '',
       password: '',
-      // profile_picture: profilepicture
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.logindemo = this.logindemo.bind(this);
@@ -17,7 +16,7 @@ class Login extends React.Component {
   }
   
   logindemo(){
-    this.props.processForm({ email: "user1@email.com", password: "password", user_name: "6'8 Gaming Great", first_name: "simon", last_name: "petrikov"})
+    this.props.processForm({ email: "demo@email.com", password: "password", user_name: "docterdemo", first_name: "tree", last_name: "trunks"})
   }
 
   componentWillUnmount(){

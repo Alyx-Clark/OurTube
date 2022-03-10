@@ -82,7 +82,7 @@ class CommentForm extends React.Component{
                 </div>
                 <div className="cf-bottom">
                     <div className="cf-profilepic">
-                        <img src={pic}/>
+                        <img className="cf-proimg" src={pic}/>
                     </div>
                     <div className="cf-info">
                         <form>
