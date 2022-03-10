@@ -13,7 +13,10 @@ import hamburger from '../../../app/assets/images/sb-hamburger.png'
 import testing from '../../../app/assets/images/testing.jpg'
 
 export default ({ currentUser, logout }) => {
-
+  let url = window.location.href.split('/')
+  // console.log(url)
+  let ele = url[4]
+  // console.log(ele)
   const display = currentUser.id ? (
     <div>
       <button onClick={logout}className="propicbtn"><img className="profilepicc" src={profilepic}/></button>
@@ -29,7 +32,7 @@ export default ({ currentUser, logout }) => {
   ) : ("");
 
   return (
-    <header className="navs">
+    <header className={`${ele !== "watch" ? "navs" : "navsshow"}`}>
       <div className="ourLogo">  
         <button className="sb-burger"><img src={hamburger} className='sb-burgerimg'/></button>
         <Link to="/"><img className="nav-ourtubepic" src={testing}/></Link>

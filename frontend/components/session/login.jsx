@@ -1,13 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import errorsimg from '../../../app/assets/images/errors.png'
+import profilepicture from '../../../app/assets/images/profilepicture.png'
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       user_name: '',
-      password: ''
+      password: '',
+      // profile_picture: profilepicture
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.logindemo = this.logindemo.bind(this);

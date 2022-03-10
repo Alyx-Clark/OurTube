@@ -1,0 +1,125 @@
+.cf-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.cf-top{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.cf-bottom{
+    display: flex;
+    padding-top: 20px;
+}
+
+
+
+.cf-commentslength{
+    font-family: Roboto, Arial, sans-serif;
+    color: #030303;
+    font-size: 16px;
+}
+
+
+.cf-sortbtn{
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #030303;
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 450;
+    padding-left: 35px;
+}
+
+.cf-sortimg{
+    width: 18px;
+}
+
+.cf-sortbytxt{
+    padding-left: 12px;
+    // padding-bottom: 20px;
+}
+
+.cf-info{
+    padding-left: 20px;
+    // background-color: orange;
+    width: 1220px;
+}
+
+.cf-input{
+    width: 1220px;
+}
+
+.cf-input-text{
+    border: none;
+    background: none;
+    outline: none;
+    width: inherit;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #030303;
+    // background-color: green;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    transition: linear 0.15s;
+    // transition: ease-out 0.15s;
+    height: 30px;
+    
+}
+
+.cf-input-text:focus {
+    border-bottom: 2px solid #030303;
+}
+
+
+.cf-input-text::placeholder{
+    font-family: Roboto, Arial, sans-serif;
+    color: #606060;
+    font-size: 14px;
+}
+
+.cf-submit{
+    visibility: hidden;
+    float: right;
+}
+
+.cf-btncancel{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(96,96,96);
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 450;
+    width: 90px;
+    height: 60px;
+    padding-right: 80px;
+}
+
+.cf-btncomment{
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #065FD4;
+    width: 105px;
+    height: 35px;
+    padding-right: 80px;
+    color: white;
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+    border-radius: 2px;
+    font-weight: 450;
+    // text-align: center;
+    padding: 0;
+    
+}
+
+.cf-commenttxt{
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // text-align: center;
+    // padding: 0;
+}

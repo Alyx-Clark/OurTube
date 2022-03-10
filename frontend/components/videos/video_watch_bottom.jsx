@@ -82,7 +82,7 @@ class VideoWatchBottom extends React.Component{
                 <div className="vw-user">
                     <div className="vw-user-top">
                         <div className="vw-user-info">
-                            <img src={video.user.profilePic}/>
+                            <img className="vw-profilepic"src={video.user.profilePic}/>
                             <div className="vw-user-words">
                                 <span className="vw-username">{video.user.userName} <img src={verifiednew} className="vw-verified"/></span>
                                 <span className="vw-subscribers">0 subscribers</span>

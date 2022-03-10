@@ -13,8 +13,8 @@ Comment.destroy_all
 User.destroy_all
 
 user1 = User.create(email: "user1@email.com", password: "password", user_name: "6'8 Gaming Great", first_name: "simon", last_name: "petrikov")
-userpic1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/user1pic.png")
-user1.profile_pic.attach(io: userpic1, filename: "user1pic.png")
+userpic1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/thedoc.png")
+user1.profile_pic.attach(io: userpic1, filename: "thedoctor.png")
 
 user2 = User.create(email: "user2@email.com", password: "wizardsrule", user_name: "EthopianCatepillar", first_name: "finn", last_name: "mertens")
 userpic2 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/user2pic.png")
@@ -124,8 +124,8 @@ pic11 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/portalwarsthu
 vid11.uploaded_thumbnail.attach(io: pic11, filename: "portalwarsthumb.png")
 
 
-com1 = Comment.create(body: "You are truly amazing", commenter_id: 1, video_id: 5)
-com2 = Comment.create(body: "I'm here to check the views, who else?", commenter_id: 2, video_id: 7)
+com1 = Comment.create(body: "You are truly amazing, I have never seen something so hard be made to look so easy! You will go pro one day, maybe.", commenter_id: 1, video_id: 5)
+com2 = Comment.create(body: "I'm here to check the views, who else? Anyone?", commenter_id: 2, video_id: 7)
 com3 = Comment.create(body: "Is time-travelling legal?", commenter_id: 3, video_id: 4)
 com4 = Comment.create(body: "Haters gonna hate", commenter_id: 4, video_id: 1)
 com5 = Comment.create(body: "Somehow, I end up here every single day", commenter_id: 5, video_id: 11)

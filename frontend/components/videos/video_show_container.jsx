@@ -4,10 +4,11 @@ import { fetchVideo, fetchVideos } from "../../actions/video_actions";
 import { fetchUsers } from "../../actions/user_actions";
 import { connect } from "react-redux";
 
-const mSTP = (state, ownProps) => ({
-    video: state.entities.videos[ownProps.match.params.videoId],
-    videos: Object.keys(state.entities.videos).map(key => state.entities.videos[key]),
-    users: state.entities.users
+const mSTP = ({entities, session}, ownProps) => ({
+    video: entities.videos[ownProps.match.params.videoId],
+    videos: Object.keys(entities.videos).map(key => entities.videos[key]),
+    users: entities.users,
+    user: entities.users[session.id]
 })
 
 // debugger 

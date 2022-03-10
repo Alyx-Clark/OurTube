@@ -5,6 +5,7 @@ import VideoUpnext from './video_up_next';
 import VideoWatch from './video_watch';
 import VideoWatchBottom from './video_watch_bottom';
 import CommentIndex from '../comments/comment_index';
+import CommentForm from '../comments/comment_form';
 
 class VideoShow extends React.Component {
     constructor(props){
@@ -35,8 +36,9 @@ class VideoShow extends React.Component {
 
 
     render(){
+        
         if(!this.props.video) return null;
-        const { video, users, videos } = this.props
+        const { video, users, videos, user } = this.props
         return(
             <div className='video-show'>
                 <NavBarContainer className="vs-navbar"/>
@@ -44,6 +46,7 @@ class VideoShow extends React.Component {
                     <div className='vs-videocolumn'>
                         <VideoWatch source={video.uploadedVideo} users={users} />
                         <VideoWatchBottom video={video} />
+                        <CommentForm video={video} user={user}/>
                         <CommentIndex video={video} />
                     </div>
                     <div className='vs-videos'>
@@ -51,8 +54,8 @@ class VideoShow extends React.Component {
                             videos.map(video => (
                                 // if(this.props.match.params.videoId !== video.id){
                                     <VideoUpnext key={video.id} video={video} />
-                                // } else{
-                                    // null
+                                // }else{
+                                //     null
                                 // }
                             ))
                         }

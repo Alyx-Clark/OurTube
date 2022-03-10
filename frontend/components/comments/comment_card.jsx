@@ -1,6 +1,7 @@
 import React from "react";
 import thumbup from '../../../app/assets/images/thumb-up.png'
 import thumbdown from '../../../app/assets/images/thumb-down.png'
+import verified from '../../../app/assets/images/verified.png'
 
 class CommentCard extends React.Component{
     constructor(props){
@@ -17,7 +18,7 @@ class CommentCard extends React.Component{
                 <div className="cc-body">
                     <div className="cc-bodytop">
                         <div className="cc-titledate">
-                            <span className="cc-username">{commenter.userName} </span>
+                            <span className="cc-username">{commenter.userName} <img src={verified}/></span>
 
                             <span className="cc-date">{comment.date}</span>
                         </div>
