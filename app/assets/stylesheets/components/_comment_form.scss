@@ -71,6 +71,7 @@
 
 .cf-input-text:focus {
     border-bottom: 2px solid #030303;
+    color: #030303;
 }
 
 
@@ -102,7 +103,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    background-color: #065FD4;
+    background-color: rgb(236, 236, 236);
     width: 105px;
     height: 35px;
     padding-right: 80px;

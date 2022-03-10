@@ -5,21 +5,42 @@ import sort from '../../../app/assets/images/sort.png'
 class CommentForm extends React.Component{
     constructor(props){
         super(props)
+        this.state = {
+            body: ""
+        }
         this.showele = this.showele.bind(this);
         this.hideele = this.hideele.bind(this);
+        this.handleInput = this.handleInput.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     showele(){
-        const input = document.getElementById("idtext");
-        const buttons = document.getElementById("idbtn");
+        let input = document.getElementById("idtext");
+        let buttons = document.getElementById("idbtn");
         if(document.activeElement === input){
             buttons.style.visibility = "visible";
         }
     }
 
     hideele(){
-        const buttons = document.getElementById("idbtn");
+        let input = document.getElementById("idtext");
+        let buttons = document.getElementById("idbtn");
+        let btn = document.getElementById("idcomment")
+        input.value = ""; 
         buttons.style.visibility = "hidden";
+        btn.style.backgroundColor = "#ECECEC";
+    }
+
+    handleInput(e){
+        this.setState({ body: e.currentTarget.value})
+        let input = document.getElementById("idtext");
+        let btn = document.getElementById("idcomment")
+        if(input.value){
+            btn.style.backgroundColor = "#065FD4";
+        }else{
+            btn.style.backgroundColor = "#ECECEC";
+        }
+
     }
 
 
@@ -40,11 +61,11 @@ class CommentForm extends React.Component{
                     </div>
                     <div className="cf-info">
                         <div className="cf-input">
-                            <input id="idtext" className="cf-input-text" type="text" placeholder="Add a comment..." onClick={this.showele}/>
+                            <input id="idtext" className="cf-input-text" type="text" placeholder="Add a comment..." onClick={this.showele} onChange={this.handleInput}/>
                         </div>
                         <div className="cf-submit" id="idbtn">
                             <button className="cf-btncancel"  onClick={this.hideele}>CANCEL</button>
-                            <button className="cf-btncomment"><span className="cf-commenttxt">COMMENT</span></button>
+                            <button id="idcomment" className="cf-btncomment"><span className="cf-commenttxt">COMMENT</span></button>
                         </div>
                     </div>
                 </div>
