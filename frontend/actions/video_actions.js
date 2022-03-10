@@ -29,13 +29,8 @@ export const fetchVideos = () => dispatch => (
     VideoAPIUtil.fetchVideos().then(videos => dispatch(receiveAllVideos(videos)))
 )
 
-export const fetchVideo = videoId => dispatch => (
-    VideoAPIUtil.fetchVideo(videoId).then((video) => {
-        // console.log(video)
-        // console.log("hellllllllllllllllllllllllllllllo")
-        return dispatch(receiveVideo(video))
-    }
-)
+export const fetchVideo = (videoId) => dispatch => (
+    VideoAPIUtil.fetchVideo(videoId).then(video => dispatch(receiveVideo(video)))
 )
 
 export const deleteVideo = videoId => dispatch => (

@@ -3,6 +3,7 @@ import VideoShow from './video_show';
 import { fetchVideo, fetchVideos } from "../../actions/video_actions";
 import { fetchUsers } from "../../actions/user_actions";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom"
 
 const mSTP = ({entities, session}, ownProps) => ({
     video: entities.videos[ownProps.match.params.videoId],
@@ -20,4 +21,4 @@ const mDTP = dispatch => ({
 })
 
 
-export default connect(mSTP, mDTP)(VideoShow);
+export default withRouter(connect(mSTP, mDTP)(VideoShow));

@@ -2,11 +2,12 @@ import { connect } from 'react-redux';
 import { deleteComment } from '../../actions/comment_actions';
 import CommentIndex from './comment_index'
 // import { fetchVideo } from '../../actions/video_actions';
+import { withRouter } from 'react-router-dom'
 
 
-const mSTP = (session, state) => ({
-    comments: Object.values(state.entities.comments),
-    userId: session.id
+const mSTP = (state) => ({
+    comments: state.entities.comments,
+    userId: state.session.id
 })
 
 const mDTP = dispatch => ({
@@ -15,4 +16,4 @@ const mDTP = dispatch => ({
 })
 
 
-export default connect(mSTP, mDTP)(CommentIndex);
+export default withRouter(connect(mSTP, mDTP)(CommentIndex));

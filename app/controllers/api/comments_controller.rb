@@ -3,7 +3,7 @@ class Api::CommentsController < ApplicationController
 
     def index
       @comments = Comment.all
-      render: index
+      render :index
     end
   
     def create

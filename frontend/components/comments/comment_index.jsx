@@ -16,13 +16,15 @@ class CommentIndex extends React.Component{
     
 
     render(){
-        const {comments, deleteComment, userId, video} = this.props;
-        console.log(video.comments)
-        if(video.comments){
+        const {comments, deleteComment, userId} = this.props;
+        // console.log(video.comments)
+        console.log("fffffffffffffffffffffffffffffffffffffff")
+        console.log(comments)
+        if(comments){
             return(
                 <div className="ci-comments">
                     {
-                        video.comments.map(comment => (
+                        comments.map(comment => (
                             <CommentCard key={comment.id} comment={comment} commenter={comment.commenter} deleteComment={deleteComment} userId={userId}/>
                         ))
                         
@@ -32,7 +34,6 @@ class CommentIndex extends React.Component{
         }else{
             return <h1>One sec :D</h1>
         }
-        // console.log("hi")
     }
 }
 

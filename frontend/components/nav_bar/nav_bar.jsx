@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import test from '../../../app/assets/images/test.png'
 import ourtubelogopic from '../../../app/assets/images/ourtubelogopic.png'
 import signinlogo from '../../../app/assets/images/signinpic.png'
-import profilepic from '../../../app/assets/images/profilepicture.png'
+import thedoc from '../../../app/assets/images/thedoc.png'
 import searchglass from '../../../app/assets/images/searchglass.png'
 import microphone from '../../../app/assets/images/microphone.png'
 import uploadicon from '../../../app/assets/images/uploadicon.png'
@@ -19,7 +19,7 @@ export default ({ currentUser, logout }) => {
   // console.log(ele)
   const display = currentUser.id ? (
     <div>
-      <button onClick={logout}className="propicbtn"><img className="profilepicc" src={profilepic}/></button>
+      <button onClick={logout} className="propicbtn"><img className="profilepicc" src={thedoc}/></button>
     </div>
   ) : (
     <div>

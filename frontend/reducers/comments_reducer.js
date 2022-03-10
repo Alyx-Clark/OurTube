@@ -1,4 +1,4 @@
-import {RECEIVE_COMMENT, DELETE_COMMENT } from "../actions/comment_action";
+import {RECEIVE_COMMENT, DELETE_COMMENT } from "../actions/comment_actions";
 import {RECEIVE_VIDEO} from "../actions/video_actions";
 
 const commentsReducer = (oldState = [], action) => {
@@ -10,8 +10,8 @@ const commentsReducer = (oldState = [], action) => {
         case RECEIVE_VIDEO:
             return action.video.comments
         case RECEIVE_COMMENT:
-            nextState.unshift(action.comment)
-            return nextState
+            nextState.unshift(action.comment);
+            return nextState;
         case DELETE_COMMENT:
             return nextState.filter(comment => comment.id != action.commentId);
         default:
