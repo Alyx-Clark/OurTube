@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom'
 
 const mSTP = (state) => ({
     comments: state.entities.comments,
+    // comments: Object.values(state.entities.comments),
     userId: state.session.id
 })
 

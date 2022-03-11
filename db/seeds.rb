@@ -60,10 +60,6 @@ user11 = User.create(email: "user11@email.com", password: "wizardsrule", user_na
 userpic11 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/user11pic.png")
 user11.profile_pic.attach(io: userpic11, filename: "user11pic.png")
 
-demo1 = User.create(email: "demo@email.com", password: "password", user_name: "docterdemo", first_name: "tree", last_name: "trunks")
-demopic1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/finaldoc.png")
-demo1.profile_pic.attach(io: demopic1, filename: "finaldoc.png")
-
 
 vid1 = Video.create(title: "THIS HAPPENED...(not clickbait)", description: "Wow this was one of the most surprising things!", uploader_id: 1)
 file1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/rocket.mp4")
@@ -165,3 +161,7 @@ com30 = Comment.create(body: "Oh now I get it! ha!", commenter_id: 8, video_id: 
 com31 = Comment.create(body: "( ͡° ͜ʖ ͡°)", commenter_id: 9, video_id: 5)
 com32 = Comment.create(body: "(づ｡ ◕‿‿◕｡) づ", commenter_id: 10, video_id: 3)
 com33 = Comment.create(body: "( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°) ʕ•ᴥ•ʔ", commenter_id: 11, video_id: 1)
+
+demo1 = User.create(email: "demo@email.com", password: "password", user_name: "docterdemo", first_name: "tree", last_name: "trunks")
+demopic1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/finaldoc.png")
+demo1.profile_pic.attach(io: demopic1, filename: "finaldoc.png")

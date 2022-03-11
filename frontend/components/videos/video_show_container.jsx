@@ -9,7 +9,8 @@ const mSTP = ({entities, session}, ownProps) => ({
     video: entities.videos[ownProps.match.params.videoId],
     videos: Object.keys(entities.videos).map(key => entities.videos[key]),
     users: entities.users,
-    user: entities.users[session.id]
+    user: entities.users[session.id],
+    userId: session.id
 })
 
 // debugger 

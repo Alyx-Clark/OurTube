@@ -21,8 +21,8 @@ class VideoShow extends React.Component {
         if(!this.props.match) { return null}
         // console.log("hi")
         // console.log("thisiscodfmaoifelllllllllllllllllll")
-        this.props.fetchVideo(this.props.match.params.videoId);
-        this.props.fetchVideos();
+        this.props.fetchVideo(this.props.match.params.videoId, this.props.userId);
+        // this.props.fetchVideos();
     }
 
     componentDidUpdate(prevProp) {
@@ -38,7 +38,7 @@ class VideoShow extends React.Component {
 
 
     render(){
-        
+
         if(!this.props.video) return null;
         const { video, users, videos, user } = this.props
         return(

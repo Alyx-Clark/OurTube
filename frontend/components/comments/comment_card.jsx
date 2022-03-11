@@ -6,9 +6,12 @@ import verified from '../../../app/assets/images/verified.png'
 class CommentCard extends React.Component{
     constructor(props){
         super(props)
+        // console.log("Test")
     }
 
+
     render(){
+        // console.log("hellll")
         const {comment, userId, commenter, deleteComment} = this.props;
         return(
             <div className="cc-comment">

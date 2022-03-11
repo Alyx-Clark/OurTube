@@ -21,7 +21,8 @@ class CommentIndex extends React.Component{
         console.log("fffffffffffffffffffffffffffffffffffffff")
         console.log(comments)
 
-        if(comments.length > 0){
+        if(comments){
+            // console.log("hi")
             return(
                 <div className="ci-comments">
                     {
