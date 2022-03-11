@@ -9,6 +9,7 @@ class CommentCard extends React.Component{
         super(props)
         // console.log("Test")
         // this.elearr = this.elearr.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
     componentDidMount(){
@@ -70,6 +71,8 @@ class CommentCard extends React.Component{
             }
         }
 
+
+
         // elearray.forEach(ele =>
             // let dots = document.getElementById("id-dots")
         //     let com = document.getElementById("id-comment")
@@ -84,6 +87,14 @@ class CommentCard extends React.Component{
         // )
     }
 
+    handleDelete(commenter, userId, comment){
+        if(commenter.id === userId){
+            this.props.deleteComment(comment.id)
+        }else{
+            console.log("sorry")
+        }
+    }
+
     // elearr(){
     //     let elearray = document.querySelectorAll("div.cc-comment")
     //     console.log(elearray);
@@ -95,6 +106,7 @@ class CommentCard extends React.Component{
     render(){
         // console.log("hellll")
         const {comment, userId, commenter, deleteComment} = this.props;
+        console.log(commenter)
         return(
             <div id="id-comment" className="cc-comment">
                 <div>
@@ -117,7 +129,7 @@ class CommentCard extends React.Component{
                         </div>
                         <div id="cc-mymod" className="cc-modal">
                             <div className="cc-modal-content">
-                                <button className="cc-modbtn">Delete</button>
+                                <button className="cc-modbtn" onClick={()=>{this.handleDelete(commenter, userId, comment)}}>Delete </button>
                             </div>
                         </div>
                     </div>
