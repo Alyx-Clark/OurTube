@@ -8,21 +8,13 @@ class CommentIndex extends React.Component{
 
     }
 
-    componentDidMount(){
-        // this.props.fetchVideo(this.props.video.id)
-        // console.log("mom")
-    }
 
     
 
     render(){
         const {comments, deleteComment, userId} = this.props;
-        // console.log(video.comments)
-        // console.log("fffffffffffffffffffffffffffffffffffffff")
-        // console.log(comments)
 
         if(comments){
-            // console.log("hi")
             return(
                 <div className="ci-comments">
                     {

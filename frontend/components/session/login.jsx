@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import errorsimg from '../../../app/assets/images/errors.png'
-import profilepicture from '../../../app/assets/images/profilepicture.png'
 
 class Login extends React.Component {
   constructor(props) {
@@ -50,7 +49,6 @@ class Login extends React.Component {
   render() {
     return (
       <div className="signupForm">
-        {/* <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" /> */}
         <form className="form" onSubmit={this.handleSubmit}>
           <div className="headersLogin">
             <div className="letters">

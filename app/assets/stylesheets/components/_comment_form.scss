@@ -1,7 +1,6 @@
 .cf-form{
     display: flex;
     flex-direction: column;
-    // background-color: green;
     height: 125px;
 }
 
@@ -48,17 +47,15 @@
 
 .cf-sortbytxt{
     padding-left: 12px;
-    // padding-bottom: 20px;
 }
 
 .cf-info{
     padding-left: 20px;
-    // background-color: orange;
     width: 1220px;
 }
 
 .cf-input{
-    width: 1220px;
+    width: 1210px;
 }
 
 .cf-input-text{
@@ -69,10 +66,8 @@
     font-family: Roboto, Arial, sans-serif;
     font-size: 14px;
     color: #030303;
-    // background-color: green;
     border-bottom: 1px solid rgb(224, 224, 224);
     transition: linear 0.15s;
-    // transition: ease-out 0.15s;
     height: 30px;
     
 }
@@ -120,15 +115,7 @@
     font-family: Roboto, Arial, sans-serif;
     border-radius: 2px;
     font-weight: 450;
-    // text-align: center;
     padding: 0;
     
 }
 
-.cf-commenttxt{
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // text-align: center;
-    // padding: 0;
-}

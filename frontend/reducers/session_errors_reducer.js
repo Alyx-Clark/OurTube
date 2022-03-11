@@ -3,7 +3,6 @@ import {
     RECEIVE_CURRENT_USER,
     REMOVE_ERRORS,
 } from '../actions/session_actions';
-// import { LOCATION_CHANGE } from 'connected-react-router';
   
 const sessionErrorsReducer = (oldstate = [], action) => {
     Object.freeze(oldstate);

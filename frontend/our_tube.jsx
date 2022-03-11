@@ -1,4 +1,3 @@
-//React
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
@@ -24,11 +23,3 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     const root = document.getElementById("root");
-//     const store = configureStore();
-//     ReactDOM.render(<h1>Welcome to OurTube....but youre not supposed to see this...</h1>, root);
-//     window.getState = store.getState;
-//     window.dispatch = store.dispatch;
-//   });

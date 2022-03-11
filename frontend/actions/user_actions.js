@@ -11,10 +11,7 @@ const receiveAllUsers = (users) => {
 
 
 export const fetchUsers = () => dispatch => {
-    // console.log("usersactionsssss")
     return UserAPIUtil.fetchUsers().then((users) => {
-        // console.log(users)
-        // console.log("usersactionss")
         return dispatch(receiveAllUsers(users))
         }
     )

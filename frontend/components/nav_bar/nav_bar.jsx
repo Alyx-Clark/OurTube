@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import test from '../../../app/assets/images/test.png'
-import ourtubelogopic from '../../../app/assets/images/ourtubelogopic.png'
 import signinlogo from '../../../app/assets/images/signinpic.png'
-import thedoc from '../../../app/assets/images/thedoc.png'
 import searchglass from '../../../app/assets/images/searchglass.png'
 import microphone from '../../../app/assets/images/microphone.png'
 import uploadicon from '../../../app/assets/images/uploadicon.png'
@@ -11,18 +8,11 @@ import linkedin from '../../../app/assets/images/linkedin.png'
 import github from '../../../app/assets/images/github.png'
 import hamburger from '../../../app/assets/images/sb-hamburger.png'
 import testing from '../../../app/assets/images/testing.jpg'
-import finaldoc from '../../../app/assets/images/finaldoc.png'
-import guestuser from '../../../app/assets/images/guestuser.png'
 
 export default ({ currentUser, logout, user}) => {
-  // console.log("ehehehe")
   let url = window.location.href.split('/')
-  // console.log(url)
   let ele = url[4]
-  // console.log(currentUser.id)
 
-  // console.log("hhhhhhhhhhhhhhhhhhhh")
-  // console.log(user.profile_pic)
 
   const display = currentUser.id ? (
     <div>
@@ -43,9 +33,6 @@ export default ({ currentUser, logout, user}) => {
       <div className="ourLogo">  
         <button className="sb-burger"><img src={hamburger} className='sb-burgerimg'/></button>
         <Link to="/"><img className="nav-ourtubepic" src={testing}/></Link>
-        {/* <Link to="/" className='nav-ourtubetext'>
-          <img className="nav-ourtubepic" src={ourtubelogopic}/>OurTube
-          </Link> */}
       </div>
       <div className="navsearchbar">
         <input type="text" className="searchbar" placeholder="Search"/>

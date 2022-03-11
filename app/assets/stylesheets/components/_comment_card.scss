@@ -3,15 +3,12 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 140px;
-    // background-color: green;
 }
 
 .cc-comment{
     display: flex;
     font-family: Roboto, Arial, sans-serif;
-    // padding-top: 15px;
     padding-bottom: 12px;
-    // background-color: green;
     margin-top: 8px;
 }
 
@@ -23,14 +20,10 @@
 
 .cc-bodytop{
     display: flex;
-    // align-items: center;
-    // justify-content: center;
     font-family: Roboto, Arial, sans-serif;
-    // background-color: orange;
 }
 
 .cc-userpic{
-    // padding-bottom: 20px;
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -39,7 +32,6 @@
 
 .cc-titledate{
     padding-left: 10px;
-    // padding-bottom: 10px;
 }
 
 .cc-username{
@@ -59,7 +51,6 @@
     color: #030303;
     padding-left: 10px;
     padding-top: 10px;
-    // background-color: green;
     width: 1240px; 
     display: flex;
     justify-content: space-between;
@@ -69,9 +60,6 @@
     font-family: Roboto, Arial, sans-serif;
     padding-left: 5px;
     padding-top: 5px;
-    // display: flex;
-    // justify-content: space-between;
-    // background-color: orange;
 }
 
 .cc-iconbtn{
@@ -105,9 +93,7 @@
     height: 36px;
     cursor: pointer;
     border-radius: 50%;
-    // background-color: orange;
     visibility: hidden;
-    // transition: background-color 0.5s ease-out;
 }
 
 .cc-dotsimg{
@@ -121,22 +107,17 @@
     position: absolute;
     z-index: 1;
     width: 120px;
-    height: 80px;
+    height: 70px;
     background-color: rgb(255, 255, 255);
-    // background-color: green;
-    box-shadow: rgb(209, 209, 209);
+    // box-shadow: rgb(209, 209, 209);
+    box-shadow: 1px 0px 5px;
     margin-left: 1210px;
-    // margin-bottom: 340px;
-    // padding-bottom: 20px;
 }
 
 .cc-modal-content{
-    // margin: 15% auto; 
-    // padding: 10px;
-    // align-items: center;
     margin-top: 10%;
     width: 100%;
-    height: 70%;
+    height: 65%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,4 +136,8 @@
     font-size: 14px;
     font-family: Roboto, Arial, sans-serif;
     color: #030303;
+}
+
+.cc-trshimg{
+    padding-right: 20px;
 }

@@ -11,8 +11,6 @@ import subscribe from '../../../app/assets/images/subscribe.png'
 class VideoWatchBottom extends React.Component{
     constructor(props){
         super(props)
-
-        // let likes = Math.floor(Math.random() * (999 - 10) + 10)
         this.state = {
             likes: 43,
             views: Math.floor(Math.random() * (99999 - 10) + 10)
@@ -39,7 +37,6 @@ class VideoWatchBottom extends React.Component{
 
     render(){
         const { video } = this.props
-        // const views = Math.floor(Math.random() * (99999 - 10) + 10)
         const dislikes = Math.floor(Math.random() * (999 - 10) + 10)
         return(
             <div className="vw-container">

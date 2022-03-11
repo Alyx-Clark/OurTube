@@ -13,8 +13,6 @@ const mSTP = ({entities, session}, ownProps) => ({
     userId: session.id
 })
 
-// debugger 
-
 const mDTP = dispatch => ({
     fetchVideo: (videoId) => dispatch(fetchVideo(videoId)),
     fetchVideos: () => dispatch(fetchVideos()),

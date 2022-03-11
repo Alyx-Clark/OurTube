@@ -3,12 +3,10 @@ import { createComment } from '../../actions/comment_actions';
 import CommentForm from './comment_form';
 import { withRouter } from 'react-router-dom';
 
-// console.log("test")
 const mSTP = (state, ownProps) => ({
     video: state.entities.videos[ownProps.match.params.videoId],
     user: state.entities.users[state.session.id],
     comments: Object.values(state.entities.comments)
-    // comments: state.entities.videos[ownProps.match.params.videoId].comments
 })
 
 const mDTP = dispatch => ({

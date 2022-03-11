@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import errorsimg from '../../../app/assets/images/errors.png'
-import guestuser from '../../../app/assets/images/guestuser.png'
 
 class Signup extends React.Component {
   constructor(props) {
@@ -14,12 +13,8 @@ class Signup extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.logindemo = this.logindemo.bind(this);
   }
 
-  // logindemo(){
-  //   this.props.processForm({ email: "aalex@ourtube", first_name: "aAlex", last_name: "aClark", user_name: "ademo", password: "apassword"})
-  // }
 
   update(field) {
     return e => this.setState({
@@ -51,7 +46,6 @@ class Signup extends React.Component {
   render() {
     return (
       <div className="signupForm">
-        {/* <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" /> */}
         <form className="form" onSubmit={this.handleSubmit}>
           <div className="headers">
             <div className="signupLetters">

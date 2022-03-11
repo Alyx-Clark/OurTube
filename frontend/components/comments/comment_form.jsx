@@ -16,16 +16,11 @@ class CommentForm extends React.Component{
     }
 
     showele(){
-        // console.log(this.props.createComment)
-        // console.log(this.history)
         let input = document.getElementById("idtext");
         let buttons = document.getElementById("idbtn");
         if(document.activeElement === input){
-            // console.log("hi")
             if(!this.props.user){
-                // console.log("hey")
                 this.props.history.push('/login')
-                // return <Redirect to={{pathname: "/login"}} />;
             }
             buttons.style.visibility = "visible";
         }
@@ -56,9 +51,7 @@ class CommentForm extends React.Component{
     }
 
     handleSubmit(e){
-        // console.log(this);
         e.preventDefault();
-        // console.log(this.props.user.id)
         this.props.createComment({
             body: this.state.body,
             commenter_id: this.props.user.id,
@@ -69,10 +62,7 @@ class CommentForm extends React.Component{
     }
 
     render(){
-        // console.log(this.props.user);
-        // const {comments} = this.props.video;
         const {video, user, comments} = this.props;
-        // console.log(user)
         const pic = user ? user.profilePic : guestuser
         return(
             <div className="cf-form">

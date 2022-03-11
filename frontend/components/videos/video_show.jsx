@@ -4,10 +4,8 @@ import NavBarContainer from '../nav_bar/nav_bar_container';
 import VideoUpnext from './video_up_next';
 import VideoWatch from './video_watch';
 import VideoWatchBottom from './video_watch_bottom';
-// import CommentIndex from '../comments/comment_index';
 import CommentIndexContainer from '../comments/comment_index_container'
 import CommentFormContainer from '../comments/comment_form_container';
-// import CommentForm from '../comments/comment_form';
 
 class VideoShow extends React.Component {
     constructor(props){
@@ -16,11 +14,9 @@ class VideoShow extends React.Component {
 
 
     componentDidMount(){
-        // console.log("thisiscodfmaoife")
         this.props.fetchUsers();
         if(!this.props.match) { return null}
-        // console.log("hi")
-        // console.log("thisiscodfmaoifelllllllllllllllllll")
+
         this.props.fetchVideo(this.props.match.params.videoId, this.props.userId);
         this.props.fetchVideos();
     }
@@ -28,13 +24,8 @@ class VideoShow extends React.Component {
     componentDidUpdate(prevProp) {
         if(this.props.match.params.videoId !== prevProp.match.params.videoId){
            this.props.fetchVideo(this.props.match.params.videoId);
-        // (this.props.video).load()
         }
     }
-
-    // videosSide(){
-       
-    // }
 
 
     render(){
@@ -49,8 +40,6 @@ class VideoShow extends React.Component {
                         <VideoWatch source={video.uploadedVideo} users={users} />
                         <VideoWatchBottom video={video} />
                         <CommentFormContainer />
-                        {/* <CommentForm video={video} user={user}/> */}
-                        {/* <CommentIndex video={video} /> */}
                         <CommentIndexContainer />
                     </div>
                     <div className='vs-videos'>

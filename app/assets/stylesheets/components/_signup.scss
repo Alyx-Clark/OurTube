@@ -13,10 +13,7 @@
     width: 400px;
     border-radius: 8px;
     padding: 20px 40px;
-    // border-color: black;
     outline: 1px solid rgb(192, 192, 192);
-    // box-shadow: 0 5px 5px rgba(92, 99, 105, .2);
-    // border-style: solid;
 }
 
 .headers{
@@ -24,7 +21,6 @@
     color: black;
     margin-bottom: 40px;
     font-weight: 100;
-    // background-color: green;
 }
 
 .headers h2{
@@ -162,8 +158,6 @@
 }
 
 .submitBtn {
-    // display: flex;
-    // margin-left: auto;
     padding: 2px 30px;
     border: none;
     background-color: #1A73E8;
@@ -179,7 +173,6 @@
 }
 
 .btn{
-    // display: flex;
     padding: 15px 30px;
     border: none;
     background-color: white;
@@ -221,5 +214,4 @@
     font-size: 12px;
     display: flex;
     align-items: center;
-    // background-color: green;
 }
