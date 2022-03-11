@@ -12,8 +12,16 @@ class CommentCard extends React.Component{
     }
 
     componentDidMount(){
+        // let mod
+        // window.onclick = function(event){
+        //     if(event.target == )
+        // }
         let elearray = document.querySelectorAll("div.cc-comment")
         let dotsarray = document.querySelectorAll("button.cc-dotsbtn")
+        let modalarray = document.querySelectorAll("div.cc-modal")
+        let modalbtn = document.querySelectorAll("button.cc-modbtn")
+        let inmodal = document.querySelectorAll("div.cc-modal-content")
+        let dotsimgarray = document.querySelectorAll("img.cc-dotsimg")
         // let dots = document.getElementById("id-dots")
 
         // function func(){
@@ -28,15 +36,38 @@ class CommentCard extends React.Component{
         for(let i = 0; i < dotsarray.length; i++){
             elearray[i].addEventListener("mouseover", func, false)
             elearray[i].addEventListener("mouseout", func1, false)
-
+            dotsarray[i].addEventListener("mousedown", func2, false)
+            dotsarray[i].addEventListener("mouseup", func3, false)
+            window.addEventListener("mousedown", func4, false)
+            
             function func(){
                 dotsarray[i].style.visibility = "visible"
             }
-    
             function func1(){
                 dotsarray[i].style.visibility = "hidden"
+                dotsarray[i].style.transition = "0s"
+                dotsarray[i].style.borderColor = "#F9F9F9"
             }
-            
+            function func2(){
+                dotsarray[i].style.backgroundColor = "#E0E0E0"
+                dotsarray[i].style.transition = "0s"
+                // console.log(modalarray[i])
+                modalarray[i].style.display = "block"
+            }
+            function func3(){
+                dotsarray[i].style.backgroundColor = "#F9F9F9"
+                dotsarray[i].style.transition = "1s"
+                dotsarray[i].style.borderColor = "black"                
+            }
+
+            function func4(event){
+                if(event.target == modalarray[i] || event.target == modalbtn[i] || event.target == inmodal[i]){
+                    // console.log("hello")
+                }else if(modalarray[i].style.display === "block" && event.target != dotsarray[i] && event.target != dotsimgarray[i]){
+                    // console.log("hi")
+                    modalarray[i].style.display = "none"
+                }
+            }
         }
 
         // elearray.forEach(ele =>
@@ -58,9 +89,11 @@ class CommentCard extends React.Component{
     //     console.log(elearray);
     // }
 
+    
+
 
     render(){
-        console.log("hellll")
+        // console.log("hellll")
         const {comment, userId, commenter, deleteComment} = this.props;
         return(
             <div id="id-comment" className="cc-comment">
@@ -77,9 +110,16 @@ class CommentCard extends React.Component{
                     </div>
                     <p className="cc-text">{comment.body} <button id="id-dots" className="cc-dotsbtn"><img className="cc-dotsimg" src={verticaldots}/></button></p>
                     <div className="cc-icons">
-                        <button className="cc-iconbtn"><img src={thumbup} className="cc-thumb"/></button>
-                        <button className="cc-iconbtn"><img src={thumbdown} className="cc-thumbdown"/></button>
-                        <button className="cc-iconbtn"><span className="cc-reply">REPLY</span></button>
+                        <div>
+                            <button className="cc-iconbtn"><img src={thumbup} className="cc-thumb"/></button>
+                            <button className="cc-iconbtn"><img src={thumbdown} className="cc-thumbdown"/></button>
+                            <button className="cc-iconbtn"><span className="cc-reply">REPLY</span></button>
+                        </div>
+                        <div id="cc-mymod" className="cc-modal">
+                            <div className="cc-modal-content">
+                                <button className="cc-modbtn">Delete</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
