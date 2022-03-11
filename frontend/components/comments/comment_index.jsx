@@ -18,8 +18,8 @@ class CommentIndex extends React.Component{
     render(){
         const {comments, deleteComment, userId} = this.props;
         // console.log(video.comments)
-        console.log("fffffffffffffffffffffffffffffffffffffff")
-        console.log(comments)
+        // console.log("fffffffffffffffffffffffffffffffffffffff")
+        // console.log(comments)
 
         if(comments){
             // console.log("hi")

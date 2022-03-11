@@ -59,12 +59,16 @@
     color: #030303;
     padding-left: 10px;
     padding-top: 10px;
+    // background-color: green;
+    width: 1240px; 
+    display: flex;
+    justify-content: space-between;
 }
 
 .cc-icons{
     font-family: Roboto, Arial, sans-serif;
-    padding-left: 10px;
-    padding-top: 15px;
+    padding-left: 5px;
+    padding-top: 5px;
 }
 
 .cc-iconbtn{
@@ -88,4 +92,21 @@
 .cc-reply{
     padding-left: 15px;
     font-weight: 500;
+}
+
+.cc-dotsbtn{
+    background: none;
+    border: none;
+    padding: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    border-radius: 50%;
+    // background-color: orange;
+    visibility: hidden;
+}
+
+.cc-dotsimg{
+    height: 18px;
+    width: 18px;
 }
