@@ -21,19 +21,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+    <meta property="og:title" content="OurTube" />
+    <meta property='og:image' content="<%= image_url('OurTubeLinkeidn.png') %>"/>
+    <meta property="og:description"
+      content="OurTube is a youtube clone that allows you to upload and view videos uploaded by other users. Users can create thier own profiles and view the profiles of other users. While viewing a video users have the ability to comment on, like, or dislike the video. Additionally users can see if other users have liked, disliked, or commented on a video."
+    />
+    <meta property="og:url"
+      content="https://ourtube1.herokuapp.com/#/"
+    />
+    
   </head>
 
   <body>
     <%= yield %>
   </body>
 
-  <meta property="og:title" content="OurTube" />
-  <meta property='og:image' content="<%= image_url('OurTubeLinkeidn.png') %>"/>
-  <meta property="og:description"
-    content="OurTube is a youtube clone that allows you to upload and view videos uploaded by other users. Users can create thier own profiles and view the profiles of other users. While viewing a video users have the ability to comment on, like, or dislike the video. Additionally users can see if other users have liked, disliked, or commented on a video."
-  />
-  <meta property="og:url"
-    content="https://ourtube1.herokuapp.com/#/"
-  />
 
 </html>
