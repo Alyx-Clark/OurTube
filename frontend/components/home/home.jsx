@@ -3,6 +3,7 @@ import NavBarContainer from '../nav_bar/nav_bar_container';
 import VideoIndexContainer from '../videos/video_index_container';
 import Categories from '../categories/categories';
 import SideBar from '../side_bar/side_bar';
+import Modal from '../modals/modal';
 
 export default () => {
   return( 
