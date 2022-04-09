@@ -35,8 +35,61 @@
     cursor: pointer;
     font-size: 15px;
     font-weight: 400;
+    background: none;
+    border: none;
+}
+
+.passbutton{
+    background: none;
+    border: none;
+    color: #1A73E8;;
+    cursor: pointer;
+
+}
+
+.passbutton:hover{
+    color: #1456ad;
 }
 
 .forgotPass:hover{
     color: #1456ad;
 }
+
+// .feature-soon{
+//     display: flex;
+//     position: absolute;
+//     width: 400px;
+//     height: 200px;
+//     border-radius: 4px;
+//     box-shadow: 2px 2px 2px 2px rgb(88, 88, 88);
+//     background-color: white;
+// }
+
+// .feature-soon h2{
+//     font-size: 32px;
+//     display: flex;
+//     font-family: 'Roboto' sans-serif;
+
+// }
+
+// .feature-soon p{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     font-size: 18px;
+//     color: rgb(88, 88, 88);
+//     font-family: 'Roboto' sans-serif;
+// }
+
+// .feature-soon button{
+//     height: 30px;
+//     width: 30px;
+//     // background-color: rgb(196, 196, 196);
+//     // border: 1px solid black;
+//     // border-radius: 50%;
+//     background: none;
+//     border: none;
+//     cursor: pointer;
+//     margin-right: 3px;
+//     margin-top: 3px;
+// }

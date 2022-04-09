@@ -8,8 +8,11 @@ import linkedin from '../../../app/assets/images/linkedin.png'
 import github from '../../../app/assets/images/github.png'
 import hamburger from '../../../app/assets/images/sb-hamburger.png'
 import testing from '../../../app/assets/images/testing.jpg'
+import Modal from '../modals/modal';
+import { useState } from "react";
 
 export default ({ currentUser, logout, user}) => {
+  const [openModal, setOpenModal] = useState(false)
   let url = window.location.href.split('/')
   let ele = url[4]
 
@@ -37,11 +40,11 @@ export default ({ currentUser, logout, user}) => {
       <div className="navsearchbar">
         <input type="text" className="searchbar" placeholder="Search"/>
         <Link to="/" className='searchglass'><img src={searchglass} className="searchglassbtn"/></Link>
-        <button className="micbtn"><img className="micimg" src={microphone}/></button>
+        <button className="micbtn" onClick={() => {setOpenModal(true)}}><img className="micimg" src={microphone}/></button>
       </div>
       <div className="display">
         <div>{upload}</div>
-        <a href="https://www.linkedin.com/in/alex-b-clark-wrightstate" target="_blank">
+        <a href="https://www.linkedin.com/in/alex-b-clark/" target="_blank">
           <img className="navlinkedin" src={linkedin}/>
         </a>
         <a href="https://github.com/Alyx-Clark" target="_blank">
@@ -49,6 +52,7 @@ export default ({ currentUser, logout, user}) => {
         </a>
         <h1>{display}</h1>
       </div>
+      {openModal && <Modal closeModal={setOpenModal}/>}
     </header>
   )
 }

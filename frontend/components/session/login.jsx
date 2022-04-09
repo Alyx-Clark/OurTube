@@ -1,17 +1,28 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import errorsimg from '../../../app/assets/images/errors.png'
+import Modal from '../modals/modal';
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       user_name: '',
-      password: ''
+      password: '',
+      openModal: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.logindemo = this.logindemo.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.setOpenModal = this.setOpenModal.bind(this);
+  }
+
+  setOpenModal(boo){
+    this.setState((prevState) => {
+      return{
+        openModal: boo
+      }
+    })
   }
   
   logindemo(){
@@ -46,10 +57,29 @@ class Login extends React.Component {
     );
   }
 
+  // comingSoon(){
+  //   let background = document.getElementById("login-page")
+  //   let background2 = document.getElementById("login-form")
+  //   let pass = document.getElementById("pass-modal")
+  //   if(pass.style.visibility === "hidden"){
+  //     // background.style.visibility = "hidden";
+  //     // background2.style.visibility = "hidden";
+  //     background.style.backgroundColor = "grey"
+  //     background2.style.backgroundColor = "grey"
+  //     pass.style.visibility = "visible"
+  //   } else{
+  //     // background.style.visibility = "visible";
+  //     // background2.style.visibility = "visible";
+  //     background.style.backgroundColor = "white"
+  //     background2.style.backgroundColor = "white"
+  //     pass.style.visibility = "hidden"
+  //   }
+  // }
+
   render() {
     return (
-      <div className="signupForm">
-        <form className="form" onSubmit={this.handleSubmit}>
+      <div className="signupForm" id="login-page">
+        <form className="form" onSubmit={this.handleSubmit} id="login-form">
           <div className="headersLogin">
             <div className="letters">
               <h2>
@@ -74,7 +104,7 @@ class Login extends React.Component {
           </div>
           {this.renderErrors()}
           <div className="forgotPass">
-            <p>Forgot password?</p>
+            <button type="button" className="passbutton" onClick={() => this.setOpenModal(true)}>Forgot password?</button>
           </div>
           <div className="demoInstead">
             <a onClick={this.logindemo}>Not your computer? Use Demo mode to sign in privately.</a>
@@ -84,6 +114,7 @@ class Login extends React.Component {
             <button type="submit" className="submitBtn">Next</button>
           </div>
         </form>
+        {this.state.openModal && <Modal closeModal={this.setOpenModal} />}
       </div>
     );
   }
