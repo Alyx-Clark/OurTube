@@ -9,17 +9,22 @@ import github from '../../../app/assets/images/github.png'
 import hamburger from '../../../app/assets/images/sb-hamburger.png'
 import testing from '../../../app/assets/images/testing.jpg'
 import Modal from '../modals/modal';
+import Modal_sign_out from '../modals/modal_sign_out'
 import { useState } from "react";
 
 export default ({ currentUser, logout, user}) => {
   const [openModal, setOpenModal] = useState(false)
+  const [openModal2, setOpenModal2] = useState(false)
   let url = window.location.href.split('/')
   let ele = url[4]
+  console.log(user)
+  // debugger
 
 
   const display = currentUser.id ? (
     <div>
-      <button onClick={logout} className="propicbtn"><img className="profilepicc" src={user.profilePic} /></button>
+      {/* <button onClick={logout} className="propicbtn"><img className="profilepicc" src={user.profilePic} /></button> */}
+      <button className="propicbtn" onClick={() => {setOpenModal2(openModal2 ? false : true)}}><img className="profilepicc" src={user.profilePic} alt="" /></button>
     </div>
   ) : (
     <div>
@@ -53,6 +58,7 @@ export default ({ currentUser, logout, user}) => {
         <h1>{display}</h1>
       </div>
       {openModal && <Modal closeModal={setOpenModal}/>}
+      {openModal2 && <Modal_sign_out closeModal2={setOpenModal2} logout={logout} user={user}/>}
     </header>
   )
 }

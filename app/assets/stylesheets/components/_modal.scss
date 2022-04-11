@@ -1,4 +1,6 @@
 .modalBackground{
+    top: 0;
+    left: 0;
     width: 2000px;
     height: 2000px;
     background-color: rgba(201, 201, 201, 0.7);
@@ -12,9 +14,9 @@
 .modalContainer{
     width: 450px;
     height: 300px;
-    top: 50%;
-    left: 50%;
-    position: absolute;
+    top: 30%;
+    left: 37%;
+    position: fixed;
     // transform: translate(-50%, -50%);
     border-radius: 12px;
     background-color: white;
