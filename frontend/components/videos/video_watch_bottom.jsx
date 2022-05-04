@@ -7,15 +7,33 @@ import save from '../../../app/assets/images/save.png'
 import dots from '../../../app/assets/images/dots.png'
 import verifiednew from '../../../app/assets/images/verifiednew.png'
 import subscribe from '../../../app/assets/images/subscribe.png'
+import dislikeClick from '../../../app/assets/images/dislikeClick.png'
+import likeClick from '../../../app/assets/images/likeClick.png'
+import Modal from "../modals/modal";
 
 class VideoWatchBottom extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            likes: 43,
-            views: Math.floor(Math.random() * (99999 - 10) + 10)
+            likes: Math.floor(Math.random() * (999) + 10),
+            views: Math.floor(Math.random() * (99999 - 10) + 10),
+            liked: false,
+            disliked: false,
+            openModal: false
         }
         this.incrementClick = this.incrementClick.bind(this);
+        this.changeDislike = this.changeDislike.bind(this);
+        this.changeLike = this.changeLike.bind(this);
+        this.wrapperFunc = this.wrapperFunc.bind(this);
+        this.setOpenModal = this.setOpenModal.bind(this); 
+    }
+
+    setOpenModal(boo){
+        this.setState((prevState) => {
+            return{
+                openModal: boo
+            }
+        })
     }
 
     componentDidMount(){
@@ -28,15 +46,51 @@ class VideoWatchBottom extends React.Component{
         }))
     }
 
+    wrapperFunc(e){
+        //console.log("hello")
+        this.changeLike(e);
+        this.incrementClick(e);
+    }
+
+
+    changeLike(e){
+        e.preventDefault()
+        this.state.disliked && this.setState(state => ({disliked: false}))
+        this.state.liked ? 
+            this.setState(state => ({
+                liked: false
+            })) :
+            this.setState(state => ({
+                liked: true
+            }))
+    }
+
+    changeDislike(e){
+        e.preventDefault()
+        this.state.liked && this.setState(state => ({liked: false, likes: state.likes -1}))
+        this.state.disliked ? 
+            this.setState(state => ({
+                disliked: false
+            })) :
+            this.setState(state => ({
+                disliked: true
+            }))
+    }
+
     incrementClick(e){
         e.preventDefault()
-        this.setState(state => ({
-            likes: state.likes + 1
-        }))
+        this.state.liked ?
+            this.setState(state => ({
+                likes: state.likes - 1
+            })) :
+            this.setState(state => ({
+                likes: state.likes + 1
+            }))
     }
 
     render(){
         const { video } = this.props
+        const { liked, disliked } = this.state;
         const dislikes = Math.floor(Math.random() * (999 - 10) + 10)
         return(
             <div className="vw-container">
@@ -51,27 +105,27 @@ class VideoWatchBottom extends React.Component{
                         </div>
                         <div className="vw-tools">
                             <div className="vw-button-text">
-                                <button className="vw-button" onClick={this.incrementClick}><img src={thumbup} className="vw-dislike"/><p className="vw-text">{this.state.likes}</p></button>
+                                <button className="vw-button"  onClick={this.wrapperFunc}><img src={ liked ? likeClick : thumbup} className="vw-dislike"/><p className="vw-text">{this.state.likes}</p></button>
                             </div>
 
                             <div className="vw-button-text">
-                                <button className="vw-button"><img src={thumbdown} className="vw-dislike"/> <p className="vw-text">DISLIKE</p> </button>
+                                <button className="vw-button" onClick={this.changeDislike}><img src={ disliked ? dislikeClick : thumbdown} className="vw-dislike"/> <p className="vw-text">DISLIKE</p> </button>
                             </div>
 
                             <div className="vw-button-text">
-                                <button className="vw-button"><img src={sharearrow}/> <p className="vw-text">SHARE</p></button>
+                                <button className="vw-button" onClick={() => this.setOpenModal(true)}><img src={sharearrow}/> <p className="vw-text">SHARE</p></button>
                             </div>
 
                             <div className="vw-button-text">
-                                <button className="vw-button"><img src={clip} className="vw-clip"/> <p className="vw-text">CLIP</p></button>
+                                <button className="vw-button" onClick={() => this.setOpenModal(true)}><img src={clip} className="vw-clip"/> <p className="vw-text">CLIP</p></button>
                             </div>
 
                             <div className="vw-button-text">
-                                <button className="vw-button"><img src={save}/> <p className="vw-text">SAVE</p></button>
+                                <button className="vw-button" onClick={() => this.setOpenModal(true)}><img src={save}/> <p className="vw-text">SAVE</p></button>
                             </div>
 
                             <div className="vw-button-text">
-                                <button className="vw-button"><img src={dots} className="vw-dots"/></button>
+                                <button className="vw-button" onClick={() => this.setOpenModal(true)}><img src={dots} className="vw-dots"/></button>
                             </div>
                         </div>
                     </div>
@@ -85,10 +139,11 @@ class VideoWatchBottom extends React.Component{
                                 <span className="vw-subscribers">0 subscribers</span>
                             </div>
                         </div>
-                        <button className="vw-sub-btn"><img src={subscribe}/></button>
+                        <button className="vw-sub-btn" onClick={() => this.setOpenModal(true)}><img src={subscribe}/></button>
                     </div>
                     <p className="vw-description">{video.description}</p>
                 </div>
+                {this.state.openModal && <Modal closeModal={this.setOpenModal} />}
             </div>
         )
     }

@@ -4,12 +4,75 @@ import thumbdown from '../../../app/assets/images/thumb-down.png'
 import verified from '../../../app/assets/images/verified.png'
 import verticaldots from '../../../app/assets/images/verticaldots.png'
 import trash from '../../../app/assets/images/trash.png'
+import Modal from "../modals/modal";
+import dislikeClick from '../../../app/assets/images/dislikeClick.png'
+import likeClick from '../../../app/assets/images/likeClick.png'
 
 class CommentCard extends React.Component{
     constructor(props){
         super(props)
+        this.state = {
+            liked: false,
+            disliked: false,
+            likes: Math.floor(Math.random() * (60) + 10),
+            openModal: false
+        }
       
         this.handleDelete = this.handleDelete.bind(this)
+        this.changeDislike = this.changeDislike.bind(this);
+        this.changeLike = this.changeLike.bind(this);
+        this.wrapperFunc = this.wrapperFunc.bind(this);
+        this.setOpenModal = this.setOpenModal.bind(this);
+        this.incrementClick = this.incrementClick.bind(this);
+    }
+
+    setOpenModal(boo){
+        this.setState((prevState) => {
+            return{
+                openModal: boo
+            }
+        })
+    }
+
+    incrementClick(e){
+        e.preventDefault()
+        this.state.liked ?
+            this.setState(state => ({
+                likes: state.likes - 1
+            })) :
+            this.setState(state => ({
+                likes: state.likes + 1
+            }))
+    }
+
+    changeLike(e){
+        e.preventDefault()
+        this.state.disliked && this.setState(state => ({disliked: false}))
+        this.state.liked ? 
+            this.setState(state => ({
+                liked: false
+            })) :
+            this.setState(state => ({
+                liked: true
+            }))
+    }
+
+    changeDislike(e){
+        e.preventDefault()
+        this.state.liked && this.setState(state => ({liked: false, likes: state.likes -1}))
+        this.state.disliked ? 
+            this.setState(state => ({
+                disliked: false
+            })) :
+            this.setState(state => ({
+                disliked: true
+            }))
+    }
+
+    wrapperFunc(e){
+        //console.log("hello")
+        this.changeLike(e);
+        this.incrementClick(e);
     }
 
     componentDidMount(){
@@ -69,6 +132,7 @@ class CommentCard extends React.Component{
 
     render(){
         const {comment, userId, commenter, deleteComment} = this.props;
+        const { liked, disliked } = this.state;
         return(
             <div id="id-comment" className="cc-comment">
                 <div>
@@ -85,9 +149,9 @@ class CommentCard extends React.Component{
                     <p className="cc-text">{comment.body} <button id="id-dots" className="cc-dotsbtn"><img className="cc-dotsimg" src={verticaldots}/></button></p>
                     <div className="cc-icons">
                         <div>
-                            <button className="cc-iconbtn"><img src={thumbup} className="cc-thumb"/></button>
-                            <button className="cc-iconbtn"><img src={thumbdown} className="cc-thumbdown"/></button>
-                            <button className="cc-iconbtn"><span className="cc-reply">REPLY</span></button>
+                            <button className="cc-iconbtn" onClick={this.wrapperFunc}><img src={ liked ? likeClick : thumbup} className="cc-thumb"/><p className="cc-likes-number">{this.state.likes}</p></button>
+                            <button className="cc-iconbtn" onClick={this.changeDislike}><img src={ disliked ? dislikeClick : thumbdown} className="cc-thumbdown"/></button>
+                            <button className="cc-iconbtn" onClick={() => this.setOpenModal(true)}><span className="cc-reply">REPLY</span></button>
                         </div>
                         <div id="cc-mymod" className="cc-modal">
                             <div className="cc-modal-content">
@@ -96,6 +160,7 @@ class CommentCard extends React.Component{
                         </div>
                     </div>
                 </div>
+                {this.state.openModal && <Modal closeModal={this.setOpenModal} />}
             </div>
         )
     }
