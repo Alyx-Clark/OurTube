@@ -17,6 +17,17 @@ class Video < ApplicationRecord
         through: :comments,
         source: :commenter
 
+    has_many :likes,
+        primary_key: :id,
+        foreign_key: :video_id,
+        class_name: :Video
+
+    has_many :dislikes,
+        primary_key: :id,
+        foreign_key: :video_id,
+        class_name: :Video
+
+
         
 
 end
