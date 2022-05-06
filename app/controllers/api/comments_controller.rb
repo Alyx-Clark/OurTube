@@ -12,7 +12,7 @@ class Api::CommentsController < ApplicationController
       if @comment.save
         render :show
       else
-        render json: ["Need to be signed in to post"], status: 422
+        render json: ["Need to be signed in to comment"], status: 422
       end
     end
 

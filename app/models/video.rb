@@ -27,6 +27,14 @@ class Video < ApplicationRecord
         foreign_key: :video_id,
         class_name: :Video
 
+    has_many :likers,
+        through: :likes,
+        source: :liker
+
+    has_many :dislikers,
+        through: :likes,
+        source: :disliker
+
 
         
 

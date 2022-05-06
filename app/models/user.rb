@@ -20,13 +20,23 @@ class User < ApplicationRecord
         foreign_key: :commenter_id,
         class_name: :Comment
 
+    has_many :likes,
+        primary_key: :id,
+        foreign_key: :liker_id,
+        class_name: :Like
+
+    has_many :dislikes,
+        primary_key: :id,
+        foreign_key: :disliker_id,
+        class_name: :Like
+
     has_many :liked_videos,
         through: :likes,
-        source: :videos
+        source: :video
 
     has_many :disliked_videos,
         through: :likes,
-        source: :videos
+        source: :video
 
     def self.find_by_credentials(user_name, password)
         user = User.find_by(user_name: user_name)
