@@ -21,12 +21,10 @@ class User < ApplicationRecord
         class_name: :Comment
 
     has_many :likes,
-        primary_key: :id,
         foreign_key: :liker_id,
         class_name: :Like
 
     has_many :dislikes,
-        primary_key: :id,
         foreign_key: :disliker_id,
         class_name: :Like
 

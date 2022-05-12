@@ -13,6 +13,11 @@
             json.extract! video.user, :id, :user_name
             json.profile_pic url_for(video.user.profile_pic)
         end
+        json.likes video.likes do |like|
+            json.id like.id
+            json.liker_id like.liker_id
+            json.disliker_id like.disliker_id
+        end
         json.comments video.comments do |comment|
             json.id comment.id
             json.body comment.body

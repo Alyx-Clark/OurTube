@@ -1,7 +1,9 @@
 class Like < ApplicationRecord
-    validates :video_id, :liker_id, :disliker_id, presence: true
-    validates :liker_id, uniqueness: {scope: :video_id}
-    validates :disliker_id, uniqueness: {scope: :video_id}
+    validates :video_id, presence: true
+    validates :liker_id, uniqueness: {scope: :video_id}, presence: true, unless: ->(like) {like.disliker_id.present?}
+    validates :disliker_id, uniqueness: {scope: :video_id}, presence: true, unless: ->(like) {like.liker_id.present?}
+
+
 
     belongs_to :liker,
         primary_key: :id,

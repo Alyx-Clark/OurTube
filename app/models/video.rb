@@ -18,14 +18,12 @@ class Video < ApplicationRecord
         source: :commenter
 
     has_many :likes,
-        primary_key: :id,
         foreign_key: :video_id,
-        class_name: :Video
+        class_name: :Like
 
     has_many :dislikes,
-        primary_key: :id,
         foreign_key: :video_id,
-        class_name: :Video
+        class_name: :Like
 
     has_many :likers,
         through: :likes,

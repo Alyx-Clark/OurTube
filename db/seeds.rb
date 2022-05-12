@@ -11,6 +11,7 @@ require 'open-uri'
 Video.destroy_all
 Comment.destroy_all
 User.destroy_all
+Like.destroy_all
 
 
 
@@ -161,6 +162,13 @@ com30 = Comment.create(body: "Oh now I get it! ha!", commenter_id: 8, video_id: 
 com31 = Comment.create(body: "( ͡° ͜ʖ ͡°)", commenter_id: 9, video_id: 5)
 com32 = Comment.create(body: "(づ｡ ◕‿‿◕｡) づ", commenter_id: 10, video_id: 3)
 com33 = Comment.create(body: "( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°) ʕ•ᴥ•ʔ", commenter_id: 11, video_id: 1)
+
+like1 = Like.create(liker_id: 1, video_id: 1)
+like2 = Like.create(liker_id: 2, video_id: 1)
+like3 = Like.create(disliker_id: 1, video_id: 2)
+like4 = Like.create(liker_id: 3, video_id: 1)
+like5 = Like.create(liker_id: 4, video_id: 2)
+
 
 demo1 = User.create(email: "demo@email.com", password: "password", user_name: "docterdemo", first_name: "tree", last_name: "trunks")
 demopic1 = URI.open("https://ourtube-seeds.s3.us-east-2.amazonaws.com/finaldoc.png")
