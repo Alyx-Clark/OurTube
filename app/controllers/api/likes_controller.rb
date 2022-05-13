@@ -1,9 +1,13 @@
 class Api::LikesController < ApplicationController
-    before_action :require_logged_in
+    #before_action :require_logged_in
 
     def index
         @likes = Like.all
-        render :index
+        p "hellodddddddddddddd"
+        #p @likes
+        p "fox"
+        #render :index
+        render json: @Likes
     end
 
     def show
@@ -17,11 +21,13 @@ class Api::LikesController < ApplicationController
 
     def create
         @like = Like.new(like_params)
+        #p "lex"
+        #p @like
 
         if @like.save
             render :show
         else
-            render json: ["Need to be signed in to like"], status: 422
+            render json: ["Need to be signed in to like not really"], status: 422
         end
     end
 
