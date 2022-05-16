@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import NavBarContainer from '../nav_bar/nav_bar_container';
 import VideoUpnext from './video_up_next';
 import VideoWatch from './video_watch';
-import VideoWatchBottom from './video_watch_bottom';
+import VideoWatchBottomContainer from './video_watch_bottom_container';
 import CommentIndexContainer from '../comments/comment_index_container'
 import CommentFormContainer from '../comments/comment_form_container';
 
@@ -14,32 +14,40 @@ class VideoShow extends React.Component {
 
 
     componentDidMount(){
+        //console.log("Hiiiiiiiiiii")
+        //console.log(this.props.getLikes())
         this.props.fetchUsers();
         if(!this.props.match) { return null}
 
         this.props.fetchVideo(this.props.match.params.videoId, this.props.userId);
         this.props.fetchVideos();
-        this.props.getLikes();
+        //this.props.getLikes();
+        //console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiiii")
+        //console.log(this.props.likes);
+        //console.log(this.props.dislikes);
     }
 
     componentDidUpdate(prevProp) {
         if(this.props.match.params.videoId !== prevProp.match.params.videoId){
            this.props.fetchVideo(this.props.match.params.videoId);
         }
+        //console.log("yooooooooooo")
+        //console.log(this.props.likes)
+        //console.log(this.props.likes[1].dislikerId)
     }
 
 
     render(){
 
         if(!this.props.video) return null;
-        const { video, users, videos, user } = this.props
+        const { video, users, videos, user, likes } = this.props
         return(
             <div className='video-show'>
                 <NavBarContainer className="vs-navbar"/>
                 <div className="vs-bottom">
                     <div className='vs-videocolumn'>
                         <VideoWatch source={video.uploadedVideo} users={users} />
-                        <VideoWatchBottom video={video} />
+                        <VideoWatchBottomContainer />
                         <CommentFormContainer />
                         <CommentIndexContainer />
                     </div>

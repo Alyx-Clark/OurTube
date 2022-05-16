@@ -27,8 +27,6 @@ export const deleteLike = likeId => dispatch => (
     LikeAPIUtil.deleteLike(likeId).then(likeId => dispatch(removeLike(likeId)))
 )
 
-export const getLikes = () => dispatch => {
-    LikeAPIUtil.getAllLikes().then(likes => { 
-        console.log(likes)
-        return dispatch(receiveLikes(likes))})
-}
+export const getLikes = () => dispatch => (
+    LikeAPIUtil.getAllLikes().then(likes => dispatch(receiveLikes(likes)))
+)

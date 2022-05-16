@@ -17,7 +17,7 @@ export default ({ currentUser, logout, user}) => {
   const [openModal2, setOpenModal2] = useState(false)
   let url = window.location.href.split('/')
   let ele = url[4]
-  console.log(user)
+  //console.log(user)
   // debugger
 
 

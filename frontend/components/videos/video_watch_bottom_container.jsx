@@ -1,5 +1,6 @@
 import React from "react";
 import VideoShow from './video_show';
+import VideoWatchBottom from './video_watch_bottom'
 import { fetchVideo, fetchVideos } from "../../actions/video_actions";
 import { fetchUsers } from "../../actions/user_actions";
 import { connect } from "react-redux";
@@ -21,9 +22,9 @@ const mDTP = dispatch => ({
     fetchVideos: () => dispatch(fetchVideos()),
     fetchUsers: () => dispatch(fetchUsers()),
     createLike: (like, userId) => dispatch(createLike(like)),
-    deleteLike: (like) => dispatch(deleteLike(like)),
+    deleteLike: (likeId) => dispatch(deleteLike(likeId)),
     getLikes: () => dispatch(getLikes())
 })
 
 
-export default withRouter(connect(mSTP, mDTP)(VideoShow));
+export default withRouter(connect(mSTP, mDTP)(VideoWatchBottom));

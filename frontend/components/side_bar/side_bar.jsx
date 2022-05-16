@@ -13,6 +13,7 @@ class SideBar extends React.Component{
         this.state = {
             openModal: false
         }
+        
         this.setOpenModal = this.setOpenModal.bind(this);
     }
 
@@ -31,24 +32,24 @@ class SideBar extends React.Component{
             <div className="sb-container">
                 <div className="sb-sidebar">
                     <div className="sb-icons">
-                        <div className="sb-groups">
-                            <button className="sb-button" onClick={() => {this.setOpenModal(true)}}><img src={homeBlack} className="sb-icon"/></button>
+                        <div className="sb-groups" onClick={() => {this.setOpenModal(true)}}>
+                            <button className="sb-button"><img src={homeBlack} className="sb-icon"/></button>
                             <p className="sb-text">Home</p>
                         </div>
-                        <div className="sb-groups">
-                            <button className="sb-button" onClick={() => {this.setOpenModal(true)}}><img src={explore}/></button>
+                        <div className="sb-groups" onClick={() => {this.setOpenModal(true)}}>
+                            <button className="sb-button"><img src={explore}/></button>
                             <p className="sb-text">Explore</p>
                         </div>
-                        <div className="sb-groups">
-                            <button className="sb-button" onClick={() => {this.setOpenModal(true)}}><img src={shorts} className="sb-img"/></button>
+                        <div className="sb-groups" onClick={() => {this.setOpenModal(true)}}>
+                            <button className="sb-button"><img src={shorts} className="sb-img"/></button>
                             <p className="sb-text">Shorts</p>
                         </div>
-                        <div className="sb-groups">
-                            <button className="sb-button" onClick={() => {this.setOpenModal(true)}}><img src={subscriptions}/></button>
+                        <div className="sb-groups" onClick={() => {this.setOpenModal(true)}}>
+                            <button className="sb-button"><img src={subscriptions}/></button>
                             <p className="sb-text">Subscriptions</p>
                         </div>
-                        <div className="sb-groups">
-                            <button className="sb-button" onClick={() => {this.setOpenModal(true)}}><img src={library}/></button>
+                        <div className="sb-groups" onClick={() => {this.setOpenModal(true)}}>
+                            <button className="sb-button"><img src={library}/></button>
                             <p className="sb-text">Library</p>
                         </div>
                     </div>

@@ -14,17 +14,27 @@ import Modal from "../modals/modal";
 class VideoWatchBottom extends React.Component{
     constructor(props){
         super(props)
+        let isLiked = false; 
+        let isDisLiked = false;
+        if(Array.isArray(this.props.likes))this.props.likes.map((like) => {
+            if(this.props.userId === like.likerId){
+                isLiked = true;
+            }
+            if(this.props.userId === like.dislikerId){
+                isDisLiked = true;
+            }
+        })
         this.state = {
-            likes: Math.floor(Math.random() * (999) + 10),
+            //likes: 0,
             views: Math.floor(Math.random() * (99999 - 10) + 10),
-            liked: false,
-            disliked: false,
+            liked: isLiked,
+            disliked: isDisLiked,
             openModal: false
         }
-        this.incrementClick = this.incrementClick.bind(this);
-        this.changeDislike = this.changeDislike.bind(this);
-        this.changeLike = this.changeLike.bind(this);
-        this.wrapperFunc = this.wrapperFunc.bind(this);
+        //this.incrementClick = this.incrementClick.bind(this);
+        //this.changeDislike = this.changeDislike.bind(this);
+        //this.changeLike = this.changeLike.bind(this);
+        //this.wrapperFunc = this.wrapperFunc.bind(this);
         this.setOpenModal = this.setOpenModal.bind(this); 
     }
 
@@ -36,6 +46,7 @@ class VideoWatchBottom extends React.Component{
         })
     }
 
+
     componentDidMount(){
         this.numberWithCommas()
     }
@@ -46,50 +57,118 @@ class VideoWatchBottom extends React.Component{
         }))
     }
 
-    wrapperFunc(e){
-        //console.log("hello")
-        this.changeLike(e);
-        this.incrementClick(e);
-    }
+    // wrapperFunc(e){
+    //     //console.log("hello")
+    //     this.changeLike(e);
+    //     this.incrementClick(e);
+    // }
 
-
-    changeLike(e){
-        e.preventDefault()
-        this.state.disliked && this.setState(state => ({disliked: false}))
-        this.state.liked ? 
-            this.setState(state => ({
-                liked: false
-            })) :
+    likker(){
+        //console.log(this.props.user_id)
+        this.setState(state => ({disliked: false}))
+        let boo = true;
+        this.props.likes.map((like) => {
+            if(this.props.userId === like.likerId){
+                this.setState(() => ({
+                    liked: false
+                }))
+                this.props.deleteLike(like.id)
+                boo = false;
+            }
+        })
+        if (boo) {
+            this.props.createLike({disliker_id: null, liker_id: this.props.userId, video_id: this.props.video.id})
             this.setState(state => ({
                 liked: true
             }))
+        }
     }
 
-    changeDislike(e){
-        e.preventDefault()
-        this.state.liked && this.setState(state => ({liked: false, likes: state.likes -1}))
-        this.state.disliked ? 
-            this.setState(state => ({
-                disliked: false
-            })) :
+    dislikker(){
+        //console.log(this.props.user_id)
+        this.setState(state => ({liked: false}))
+        let boo = true;
+        this.props.likes.map((like) => {
+            if(this.props.userId === like.dislikerId){
+                this.setState(() => ({
+                    disliked: false
+                }))
+                this.props.deleteLike(like.id)
+                boo = false;
+            }
+        })
+        if (boo) {
+            this.props.createLike({disliker_id: this.props.userId, liker_id: null, video_id: this.props.video.id})
             this.setState(state => ({
                 disliked: true
             }))
+        }
     }
 
-    incrementClick(e){
-        e.preventDefault()
-        this.state.liked ?
-            this.setState(state => ({
-                likes: state.likes - 1
-            })) :
-            this.setState(state => ({
-                likes: state.likes + 1
-            }))
-    }
+
+    // changeLike(e){
+    //     e.preventDefault()
+    //     this.state.disliked && this.setState(state => ({disliked: false}))
+    //     this.state.liked ? 
+    //         this.setState(state => ({
+    //             liked: false
+    //         })) :
+    //         this.setState(state => ({
+    //             liked: true
+    //         }))
+    // }
+
+    // changeDislike(e){
+    //     e.preventDefault()
+    //     this.state.liked && this.setState(state => ({liked: false, likes: state.likes -1}))
+    //     this.state.disliked ? 
+    //         this.setState(state => ({
+    //             disliked: false
+    //         })) :
+    //         this.setState(state => ({
+    //             disliked: true
+    //         }))
+    // }
+
+    // incrementClick(e){
+    //     e.preventDefault()
+    //     this.state.liked ?
+    //         this.setState(state => ({
+    //             likes: state.likes - 1
+    //         })) :
+    //         this.setState(state => ({
+    //             likes: state.likes + 1
+    //         }))
+    // }
 
     render(){
-        const { video } = this.props
+        //if(!likesCount) return null;
+        const { video, likes, createLike } = this.props;
+        let likesCount;
+        let dislikesCount;
+        console.log(likes)
+        //console.log(Array.isArray(likes))
+        //let likeArray = likes
+        // if(typeof likes === 'object'){
+        //     likeArray = [];
+        //     Object.keys(likes).map((id) => {
+        //         likeArray.push(likes[id]);
+        //     })
+        // }
+        if(Array.isArray(likes)){
+            //console.log("hiiiiiiiiiiiii")
+            // likesCount = video.likes.map((like) => {
+            //     if(video.like.likerId){
+            //         return true
+            //     }
+            // })
+            likesCount = likes.filter(like => like.likerId !== null).length
+            dislikesCount = likes.filter(dislike => dislike.dislikerId !== null).length
+            console.log("hiiiiiiiiiiiiiiiiiii")
+            console.log(likesCount)
+        } else{
+            console.log("thisss is it");
+        }
         const { liked, disliked } = this.state;
         const dislikes = Math.floor(Math.random() * (999 - 10) + 10)
         return(
@@ -105,11 +184,12 @@ class VideoWatchBottom extends React.Component{
                         </div>
                         <div className="vw-tools">
                             <div className="vw-button-text">
-                                <button className="vw-button"  onClick={this.wrapperFunc}><img src={ liked ? likeClick : thumbup} className="vw-dislike"/><p className="vw-text">{this.state.likes}</p></button>
+                                {/* <button className="vw-button"  onClick={this.wrapperFunc}><img src={ liked ? likeClick : thumbup} className="vw-dislike"/><p className="vw-text">{this.state.likes}</p></button> */}
+                                <button className="vw-button" onClick={()=>this.likker()}><img src={ liked ? likeClick : thumbup} className="vw-dislike"/><p className="vw-text">{likesCount}</p></button>
                             </div>
 
                             <div className="vw-button-text">
-                                <button className="vw-button" onClick={this.changeDislike}><img src={ disliked ? dislikeClick : thumbdown} className="vw-dislike"/> <p className="vw-text">DISLIKE</p> </button>
+                                <button className="vw-button" onClick={()=>this.dislikker()}><img src={ disliked ? dislikeClick : thumbdown} className="vw-dislike"/> <p className="vw-text">DISLIKE</p> </button>
                             </div>
 
                             <div className="vw-button-text">
