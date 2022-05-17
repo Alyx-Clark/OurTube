@@ -2,6 +2,14 @@ import React from 'react';
 import logoutpic from '../../../app/assets/images/logoutpic.png';
 import Modal from '../modals/modal';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
+
+// let routeChange = function () {
+//     let path = '/';
+//     let history = useHistory();
+//     history.push(path);
+// }
 
 
 function Modal_sign_out({closeModal2, logout, user}) {
@@ -22,6 +30,7 @@ function Modal_sign_out({closeModal2, logout, user}) {
                 <button className='modal_sign_button' onClick={() => {
                     logout();
                     closeModal2(false);
+                    //routeChange();
                 }}>
                     <img src={logoutpic} alt="" />
                     Sign out

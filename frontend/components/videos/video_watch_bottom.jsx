@@ -14,21 +14,20 @@ import Modal from "../modals/modal";
 class VideoWatchBottom extends React.Component{
     constructor(props){
         super(props)
-        let isLiked = false; 
-        let isDisLiked = false;
-        if(Array.isArray(this.props.likes))this.props.likes.map((like) => {
-            if(this.props.userId === like.likerId){
-                isLiked = true;
-            }
-            if(this.props.userId === like.dislikerId){
-                isDisLiked = true;
-            }
-        })
+        // let isLiked = false; 
+        // let isDisLiked = false;
+        // if(Array.isArray(this.props.likes))this.props.likes.map((like) => {
+        //     if(this.props.userId === like.likerId){
+        //         isLiked = true;
+        //     }
+        //     if(this.props.userId === like.dislikerId){
+        //         isDisLiked = true;
+        //     }
+        // })
         this.state = {
-            //likes: 0,
             views: Math.floor(Math.random() * (99999 - 10) + 10),
-            liked: isLiked,
-            disliked: isDisLiked,
+            // liked: isLiked,
+            // disliked: isDisLiked,
             openModal: false
         }
         //this.incrementClick = this.incrementClick.bind(this);
@@ -64,44 +63,42 @@ class VideoWatchBottom extends React.Component{
     // }
 
     likker(){
-        //console.log(this.props.user_id)
-        this.setState(state => ({disliked: false}))
+        if(this.props.userId === null){
+            this.props.history.push('/login')
+            return;
+        }
         let boo = true;
         this.props.likes.map((like) => {
+            if(this.props.userId === like.dislikerId){
+                this.props.deleteLike(like.id)
+            }
             if(this.props.userId === like.likerId){
-                this.setState(() => ({
-                    liked: false
-                }))
                 this.props.deleteLike(like.id)
                 boo = false;
             }
         })
         if (boo) {
             this.props.createLike({disliker_id: null, liker_id: this.props.userId, video_id: this.props.video.id})
-            this.setState(state => ({
-                liked: true
-            }))
         }
     }
 
     dislikker(){
-        //console.log(this.props.user_id)
-        this.setState(state => ({liked: false}))
+        if(this.props.userId === null){
+            this.props.history.push('/login');
+            return;
+        }
         let boo = true;
         this.props.likes.map((like) => {
+            if(this.props.userId === like.likerId){
+                this.props.deleteLike(like.id)
+            }
             if(this.props.userId === like.dislikerId){
-                this.setState(() => ({
-                    disliked: false
-                }))
                 this.props.deleteLike(like.id)
                 boo = false;
             }
         })
         if (boo) {
             this.props.createLike({disliker_id: this.props.userId, liker_id: null, video_id: this.props.video.id})
-            this.setState(state => ({
-                disliked: true
-            }))
         }
     }
 
@@ -142,32 +139,19 @@ class VideoWatchBottom extends React.Component{
     // }
 
     render(){
-        //if(!likesCount) return null;
-        const { video, likes, createLike } = this.props;
+        const { video, likes, createLike, userId } = this.props;
         let likesCount;
         let dislikesCount;
-        console.log(likes)
-        //console.log(Array.isArray(likes))
-        //let likeArray = likes
-        // if(typeof likes === 'object'){
-        //     likeArray = [];
-        //     Object.keys(likes).map((id) => {
-        //         likeArray.push(likes[id]);
-        //     })
-        // }
+        let dislikedCheck;
+        let likedCheck;
+
         if(Array.isArray(likes)){
-            //console.log("hiiiiiiiiiiiii")
-            // likesCount = video.likes.map((like) => {
-            //     if(video.like.likerId){
-            //         return true
-            //     }
-            // })
             likesCount = likes.filter(like => like.likerId !== null).length
             dislikesCount = likes.filter(dislike => dislike.dislikerId !== null).length
-            console.log("hiiiiiiiiiiiiiiiiiii")
-            console.log(likesCount)
+            userId !== null ? dislikedCheck = likes.filter(dislike => dislike.dislikerId === userId).length > 0 : dislikedCheck = false;
+            userId !== null ? likedCheck = likes.filter(like => like.likerId === userId).length > 0 : likedCheck = false;
         } else{
-            console.log("thisss is it");
+            //console.log("thisss is it");
         }
         const { liked, disliked } = this.state;
         const dislikes = Math.floor(Math.random() * (999 - 10) + 10)
@@ -185,11 +169,11 @@ class VideoWatchBottom extends React.Component{
                         <div className="vw-tools">
                             <div className="vw-button-text">
                                 {/* <button className="vw-button"  onClick={this.wrapperFunc}><img src={ liked ? likeClick : thumbup} className="vw-dislike"/><p className="vw-text">{this.state.likes}</p></button> */}
-                                <button className="vw-button" onClick={()=>this.likker()}><img src={ liked ? likeClick : thumbup} className="vw-dislike"/><p className="vw-text">{likesCount}</p></button>
+                                <button className="vw-button" onClick={()=>this.likker()}><img src={ likedCheck ? likeClick : thumbup} className="vw-dislike"/><p className="vw-text">{likesCount}</p></button>
                             </div>
 
                             <div className="vw-button-text">
-                                <button className="vw-button" onClick={()=>this.dislikker()}><img src={ disliked ? dislikeClick : thumbdown} className="vw-dislike"/> <p className="vw-text">DISLIKE</p> </button>
+                                <button className="vw-button" onClick={()=>this.dislikker()}><img src={ dislikedCheck ? dislikeClick : thumbdown} className="vw-dislike"/> <p className="vw-text">DISLIKE</p> </button>
                             </div>
 
                             <div className="vw-button-text">
