@@ -5,12 +5,32 @@
 }
 
 
+
 .vidx-eachvideo{
     font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: 360px 360px 360px 360px 360px;
     background-color: rgb(249, 249, 249);
     padding-left: 83px;
+    padding-top: 22px;
+    height: 1040px;
+}
+
+
+.vidx-background-search{
+    background-color: rgb(249, 249, 249);
+    height: 1200px;
+    position: relative;
+}
+
+.vidx-eachvideo-search{
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    position: absolute;
+    left: 40%;
+    grid-template-columns: 360px;
+    background-color: rgb(249, 249, 249);
+    //padding-left: 83px;
     padding-top: 22px;
     height: 1040px;
 }

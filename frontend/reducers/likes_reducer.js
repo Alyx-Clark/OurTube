@@ -24,8 +24,8 @@ const likesReducer = (oldState = {} , action) => {
             })
             return emptyArr;
         case DELETE_LIKE:
-            console.log(action)
-            console.log(nextState)
+            //console.log(action)
+            //console.log(nextState)
             //return nextState.filter(like => like.id != action.likeId);
             Object.keys(nextState).map((id) => {
                 emptyArr.push(nextState[id]);
