@@ -31,7 +31,7 @@ class SideBar extends React.Component{
 
     render(){
         return(
-            <div className="sb-container">
+            <div className="sb-container" id="sideBar-container">
                 <div className="sb-sidebar">
                     <div className="sb-icons">
                         <div className="sb-groups" onClick={() => {this.setOpenModal(true)}}>

@@ -29,13 +29,13 @@ class NavBar extends React.Component{
   }
 
   update(e) {
-    // console.log(this.state, 'this state')
       this.setState({ searchQuery: e.currentTarget.value });
   }
 
   handleToggle() {
-    const button = document.querySelector('.sb-container')
-    button.classList.toggle('active')
+    const toggleBtn = document.getElementById('sideBar-container')
+    let invisible = toggleBtn.style.display === "none";
+    invisible ? toggleBtn.style.display = "block" : toggleBtn.style.display = "none";
   }
 
   handleSearch(e) {
@@ -99,7 +99,9 @@ class NavBar extends React.Component{
           </form>
         </div>
         <div className="display">
-          <div>{upload}</div>
+          <div>
+            {upload}
+          </div>
           <a href="https://www.linkedin.com/in/alex-b-clark/" target="_blank">
             <img className="navlinkedin" src={linkedin}/>
           </a>
