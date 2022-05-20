@@ -2,17 +2,18 @@
 .vidx-background{
     background-color: rgb(249, 249, 249);
     height: 1200px;
-    width: 99vw;
+    width: 100%;
+    overflow: hidden;
     //height: 1000%;
 }
 
 
 
 .vidx-eachvideo{
-    width: 95vw;
+    width: 20%;
     font-family: 'Roboto', sans-serif;
     display: grid;
-    grid-template-columns: 360px 360px 360px 360px 360px;
+    grid-template-columns: 18.75vw 18.75vw 18.75vw 18.75vw 18.75vw;
     background-color: rgb(249, 249, 249);
     padding-left: 83px;
     padding-top: 22px;
