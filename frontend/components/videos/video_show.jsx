@@ -6,6 +6,7 @@ import VideoWatch from './video_watch';
 import VideoWatchBottomContainer from './video_watch_bottom_container';
 import CommentIndexContainer from '../comments/comment_index_container'
 import CommentFormContainer from '../comments/comment_form_container';
+import SideBar from '../side_bar/side_bar';
 
 class VideoShow extends React.Component {
     constructor(props){
@@ -43,6 +44,7 @@ class VideoShow extends React.Component {
         const { video, users, videos, user, likes } = this.props
         return(
             <div className='video-show'>
+                <SideBar />
                 <NavBarContainer className="vs-navbar"/>
                 <div className="vs-bottom">
                     <div className='vs-videocolumn'>

@@ -33,7 +33,9 @@ class NavBar extends React.Component{
   }
 
   handleToggle() {
-    const toggleBtn = document.getElementById('sideBar-container')
+    console.log(toggleBtn)
+    let toggleBtn = document.getElementById('sideBar-container')
+    console.log(toggleBtn)
     let invisible = toggleBtn.style.display === "none";
     invisible ? toggleBtn.style.display = "block" : toggleBtn.style.display = "none";
   }
