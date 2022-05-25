@@ -1,8 +1,10 @@
 
 .ci-comments{
+    //background-color: green;
     display: flex;
     flex-direction: column;
     padding-bottom: 140px;
+    width: 66.6vw;
 }
 
 .cc-comment{
@@ -16,6 +18,7 @@
     font-family: Roboto, Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    width: 66.6vw;
 }
 
 .cc-bodytop{
@@ -51,7 +54,7 @@
     color: #030303;
     padding-left: 10px;
     padding-top: 10px;
-    width: 1240px; 
+    width: 64.5vw; 
     display: flex;
     justify-content: space-between;
 }
@@ -122,7 +125,8 @@
     background-color: rgb(255, 255, 255);
     // box-shadow: rgb(209, 209, 209);
     box-shadow: 1px 0px 5px;
-    margin-left: 1210px;
+    //margin-left: 1210px;
+    margin-left: 64vw;
 }
 
 .cc-modal-content{

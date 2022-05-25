@@ -1,8 +1,9 @@
 
 .vidx-background{
     background-color: rgb(249, 249, 249);
+    //background-color: rgb(206, 50, 50);
     height: 1200px;
-    //width: 100%;
+    //width: 100px;
     //overflow: hidden;
     //height: 1000%;
 }
@@ -13,7 +14,7 @@
     //width: 20%;
     font-family: 'Roboto', sans-serif;
     display: grid;
-    grid-template-columns: 360px 360px 360px 360px 360px;
+    grid-template-columns: 18.75vw 18.75vw 18.75vw 18.75vw 18.75vw;
     background-color: rgb(249, 249, 249);
     padding-left: 83px;
     padding-top: 22px;
@@ -98,8 +99,8 @@
 
 .vi-thumbnailpic{
     padding-left: 2px;
-    height: 202px;
-    width: 344px;
+    height: 21.25vh;
+    width: 17.75vw;
     cursor: pointer;
 }
 
@@ -146,6 +147,28 @@
     color: rgb(107, 107, 107);
     margin-top: 6px;
     font-size: 14px;
+}
+
+@media (max-width: 1400px){
+
+    .vidx-eachvideo{
+        //width: 20%;
+        font-family: 'Roboto', sans-serif;
+        display: grid;
+        grid-template-columns: 18.75vw 18.75vw 18.75vw 18.75vw;
+        background-color: rgb(249, 249, 249);
+        padding-left: 83px;
+        padding-top: 22px;
+        height: 1040px;
+    }
+
+    .vi-thumbnailpic{
+        padding-left: 2px;
+        height: 21.25vh;
+        width: 17.75vw;
+        cursor: pointer;
+    }
+
 }
 
 
