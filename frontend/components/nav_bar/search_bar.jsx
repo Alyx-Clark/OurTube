@@ -40,8 +40,8 @@ class SearchBar extends React.Component{
         //console.log('here')
         const { videos } = this.props;
         return(
-            <div className='vidx-background-search'>
-                <div className='vidx-eachvideo-search'>
+            <div className='vidx-background'>
+                <div className='vidx-eachvideo'>
                     {
                         this.state.videos.map(video => (
                         <VideoItem key={video.id} video={video}/>)

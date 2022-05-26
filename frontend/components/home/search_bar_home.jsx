@@ -11,6 +11,7 @@ export default () => {
   <div className="home">
     <SideBar />
     <NavBarContainer />
+    <Categories />
     <SearchBarContainer /> 
   </div>
 )}
