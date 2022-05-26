@@ -4,7 +4,7 @@ import VideoCard from "./video_card";
 function VideoUpnext(props){
     
     return(
-        <div>
+        <div className="cards-on-side">
             <VideoCard video={props.video}/>
         </div>
     )
