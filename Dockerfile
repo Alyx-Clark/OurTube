@@ -17,15 +17,18 @@ RUN curl -SLO https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz &&
 WORKDIR /app
 COPY . .
 
-# 3. FIX: Install Bundler 2.3.27
+# 3. FIX: Override the system's locked Bundler version
+ENV BUNDLER_VERSION=2.3.27
+
+# 4. Install the correct Bundler version
 RUN gem install bundler -v 2.3.27
 
-# 4. Force the use of Bundler 2.3.27 for installation
-RUN bundle _2.3.27_ install --without development test
+# 5. Install Gems and Node packages
+RUN bundle install --without development test
 RUN npm install
 
-# 5. Force the use of Bundler 2.3.27 for compiling assets
-RUN RAILS_ENV=production bundle _2.3.27_ exec rake assets:precompile
+# 6. Compile assets
+RUN RAILS_ENV=production bundle exec rake assets:precompile
 
-# 6. Start the server using Bundler 2.3.27
-CMD ["bundle", "_2.3.27_", "exec", "rails", "server", "-b", "0.0.0.0"]
+# Start the server
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
