@@ -17,8 +17,8 @@ RUN curl -SLO https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz &&
 WORKDIR /app
 COPY . .
 
-# 3. FIX: Upgrade Bundler to version 2+ (Required for your lockfile)
-RUN gem install bundler
+# 3. FIX: Install the specific Bundler version compatible with Ruby 2.5
+RUN gem install bundler -v 2.3.27
 
 # Install Gems and Node packages
 RUN bundle install --without development test
