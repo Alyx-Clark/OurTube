@@ -17,15 +17,15 @@ RUN curl -SLO https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz &&
 WORKDIR /app
 COPY . .
 
-# 3. FIX: Install the specific Bundler version compatible with Ruby 2.5
+# 3. FIX: Install Bundler 2.3.27
 RUN gem install bundler -v 2.3.27
 
-# Install Gems and Node packages
-RUN bundle install --without development test
+# 4. Force the use of Bundler 2.3.27 for installation
+RUN bundle _2.3.27_ install --without development test
 RUN npm install
 
-# Compile assets
-RUN RAILS_ENV=production bundle exec rake assets:precompile
+# 5. Force the use of Bundler 2.3.27 for compiling assets
+RUN RAILS_ENV=production bundle _2.3.27_ exec rake assets:precompile
 
-# Start the server
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+# 6. Start the server using Bundler 2.3.27
+CMD ["bundle", "_2.3.27_", "exec", "rails", "server", "-b", "0.0.0.0"]
