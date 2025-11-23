@@ -1,12 +1,17 @@
-# Use an older Ruby image that matches your Gemfile
+# Use the older Ruby image
 FROM ruby:2.5.1
 
-# Install dependencies (Node.js 10 and Postgres client)
-# We use archived sources because Debian Stretch (Ruby 2.5 base) is EOL
-RUN printf "deb http://archive.debian.org/debian/ stretch main" > /etc/apt/sources.list && \
-    printf "deb http://archive.debian.org/debian-security stretch/updates main" >> /etc/apt/sources.list && \
-    curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
-    apt-get update && apt-get install -y nodejs postgresql-client --allow-unauthenticated
+# 1. Fix the "Archive" sources so we can still install basic tools
+# We use [check-valid-until=no] to ignore the expired security keys of Debian Stretch
+RUN printf "deb [check-valid-until=no] http://archive.debian.org/debian/ stretch main\n" > /etc/apt/sources.list && \
+    printf "deb [check-valid-until=no] http://archive.debian.org/debian-security stretch/updates main\n" >> /etc/apt/sources.list && \
+    apt-get update && \
+    apt-get install -y --allow-unauthenticated postgresql-client xz-utils
+
+# 2. Install Node.js 10.13.0 manually (Bypassing the broken setup script)
+RUN curl -SLO https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz && \
+    tar -xJf node-v10.13.0-linux-x64.tar.xz -C /usr/local --strip-components=1 && \
+    rm node-v10.13.0-linux-x64.tar.xz
 
 # Set up the app directory
 WORKDIR /app
