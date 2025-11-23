@@ -27,8 +27,13 @@ RUN gem install bundler -v 2.3.27
 RUN bundle install --without development test
 RUN npm install
 
-# 6. Compile assets (FIX: Use a dummy secret just for this step)
-RUN RAILS_ENV=production SECRET_KEY_BASE=dummy bundle exec rake assets:precompile
+# 6. FIX: Configure the environment for Production
+ENV RAILS_ENV=production
+ENV RAILS_LOG_TO_STDOUT=true
+ENV RAILS_SERVE_STATIC_FILES=true
+
+# 7. Compile assets (Using a dummy secret just for this build step)
+RUN SECRET_KEY_BASE=dummy bundle exec rake assets:precompile
 
 # Start the server
 CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
